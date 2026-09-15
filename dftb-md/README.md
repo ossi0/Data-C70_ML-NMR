@@ -12,7 +12,7 @@
 
 ---
 
-## Producing the reference dataset structures of C<sub>60</sub>
+## Producing the reference dataset structures of He@C<sub>70</sub> and He<sub>2</sub>@C<sub>70</sub>
 
 This directory contains the necessary input files to reproduce the semi-empirical MD data with DFTB+ software. The configurations of the output MD trajectory are used as reference data in the training of NequIP MLIP model. The output files, including the snapshots taken from the semi-empirical MD simulation can be found in the [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) of this project.
 
@@ -39,7 +39,7 @@ Scripts used to analyze the MD trajectory and to initialize the [DFT calculation
 
 ### `prepare.sh`
 
-After the DFTB+ calculation has been completed this shell script prepares the results for the DFT calculations of the reference He@C<sub>70</sub>/He<sub>2</sub>@C<sub>70</sub> configurations.  
+After the DFTB+ calculation has been completed this shell script prepares the sample snapshots for DFT calculations.  
 Running the script with the command `./prepare.sh` creates the following file structure:
 ```
 ./cluster_50000
@@ -52,7 +52,7 @@ Running the script with the command `./prepare.sh` creates the following file st
 ```
 Note that the first selected configuration is `cluster_50000`, since the beginning of the semi-empirical MD simulation is discarded due to the equilibration stage of the simulation.
 
-Follow the instruction in [dft-1_calculations](../dft-1_calculations) or [dft-2_calculations](../dft-2_calculations) to run the DFT calculations for the He@C<sub>70</sub>/He<sub>2</sub>@C<sub>70</sub> configurations.
+Follow the instruction in [dft-1_calculations](../dft-1_calculations) or [dft-2_calculations](../dft-2_calculations) to run the DFT calculations for the sample configurations.
 
 
 ---

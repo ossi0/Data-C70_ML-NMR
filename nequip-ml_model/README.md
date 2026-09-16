@@ -48,7 +48,7 @@ The training process creates the following output files:
 ./
   ml_nequip-output_<JOB-ID>.txt     # Output log file of the training
   ml_nequip-errors_<JOB-ID>.txt    # Error log file of the training
-  outputs       # A directory containing detailed data of the training process, including the final model parameter file
+  outputs       # A directory containing data from the training process, including the final model file
 ```
 
 - In the [output_files](./output_files) directory, the output files of the training process of the NequIP MLIP model is provided.

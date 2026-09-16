@@ -17,7 +17,6 @@
 start_time=$(date +"%Y-%m-%d %H:%M:%S")
 echo "Job started at $start_time"
 
-#module load python-pytorch
 module load gcc/15.2.0
 source /scratch/plantto/olaurila/allegro/allegro-venv/bin/activate
 

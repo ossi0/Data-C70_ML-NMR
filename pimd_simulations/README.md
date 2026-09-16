@@ -66,7 +66,7 @@ After running the simulation, you will have the following output files:
     PREFIX.pos_<p>.xyz    # xyz-file containing the positions of the atoms at intervals of simulation steps
     PREFIX.chk            # Checkpoint file produced, containing the exact state of the simulation at given simulation step
 ```
-- <p> is the bead number, and it ranges from 0 to P-1, with P being the bead number used in the PIMD simulation
+- `p` is the bead number, and it ranges from `0` to `P-1`, with `P` being the bead number used in the PIMD simulation
 ---
 
 For further details, please refer to the respective folders or contact the author via the provided email.

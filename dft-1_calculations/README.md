@@ -107,4 +107,7 @@ ORCA `**TightSCF**` criteria used:
 
 ---
 
-- **Computational Resource**: [CSC](https://csc.fi/) Supercomputer [MAHTI](https://www.mahti.csc.fi/public/)er details, please refer to the respective folders or contact the author via the provided email.
+- **Computational Resource**: [CSC](https://csc.fi/) Supercomputer [MAHTI](https://www.mahti.csc.fi/public/)
+
+  
+- For details, please refer to the respective folders or contact the author via the provided email.

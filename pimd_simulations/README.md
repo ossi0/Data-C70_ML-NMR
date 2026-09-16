@@ -22,8 +22,8 @@ Example PIMD simulation runs with the resulting output files for the He@C<sub>70
 Four sub-directories are provided, which include the input files to start the equilibrium and production simulation runs
 - [pimd_mono_GLE](./pimd_mono_GLE)
 - [pimd_mono_PILE-G](./pimd_mono_PILE-G)
-- [pimd_mono_PIGLET_P4](./pimd_mono_PIGLET_P4)
-- [pimd_mono_PIGLET_P8](./pimd_mono_PIGLET_P8)
+- [pimd_mono_PIGLET-P4](./pimd_mono_PIGLET-P4)
+- [pimd_mono_PIGLET-P8](./pimd_mono_PIGLET-P8)
 
 The structure of each directory is:
 

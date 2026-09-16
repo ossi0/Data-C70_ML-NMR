@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #--------------------------------------------------------------------------------------------------------------------------------
-#SBATCH --job-name=ne_d4000
+#SBATCH --job-name=nequip_train
 #SBATCH --partition=gpumedium
 #SBATCH --account=plantto # !!it is mandatory to specify the account (project) as precised in the CSC rules!!
 #SBATCH --nodes=1
@@ -30,7 +30,6 @@ print(torch.cuda.device_count())"
 # Set unlimited stack size
 ulimit -s unlimited
 
-#nequip-train -cn config.yaml
 nequip-train -cn config.yaml
 
 # Record end time

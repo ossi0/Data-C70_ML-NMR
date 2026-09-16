@@ -31,11 +31,12 @@ The output files and the calculation results of the example provided here can be
 Calculation directory structure example:
 ```
 ./cluster_<ID>/
-    opt.inp
-    coordinates.xyz
-    mahti_orca.job
+    opt.inp 
+    coordinates.xyz 
+    mahti_orca.job 
 ```
 To start the calculation, all the necessary ORCA input files should be included in the desired directory. The calculation produces the following output files:
+```
     `energy`, 
     `opt.engrad`, 
     `jobfile.err<JOB_ID>`, 
@@ -52,7 +53,8 @@ To start the calculation, all the necessary ORCA input files should be included 
     `opt_gbw`,
     `opt_out`,
     `opt_property.txt`, and
-    `opt.xyz`.
+    `opt.xyz`
+```
     
 
 ## Computational Details

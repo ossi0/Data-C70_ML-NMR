@@ -70,8 +70,8 @@ The dataset **molecules.xyz** was prepared using a Python script (`createxyz.py`
 
 ### `create_db.py`
 
-1. Reads the molecules.xyz file
-2. Writes the structures to the molecules.db file one by one
+1. Reads the `molecules.xyz` file
+2. Writes the structures to the `molecules.db` file one by one
 
 ### Running the Script
 

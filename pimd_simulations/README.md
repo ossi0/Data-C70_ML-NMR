@@ -44,8 +44,8 @@ The `IPI_INPUT`variable in the `job_base.sh` script must be set to
 - in the case of running an equilibrium simulation
 
 and to **PREFIX.chk**
-- if intending to run a production simulation run starting from the equilibrated simulation state, or 
-- continuing the simulation in a new simulation run starting from the last simulation state in the previous simulation run 
+- if intending to run a production simulation job starting from the equilibrated simulation state, or 
+- continuing the simulation in a new simulation job starting from the last simulation state in the previous simulation job 
 
 ## Workflow
 Necessary files to start PIMD simulation using [i-PI](https://github.com/i-pi/i-pi) with [ASE](https://ase-lib.org) as a client, are `init.xyz`, `input.xml`, `job_base.sh`, `gpumodel.nequip.pt2`, and `run_ase.py`.

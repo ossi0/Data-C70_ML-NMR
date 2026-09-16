@@ -62,7 +62,6 @@ sbatch compile.sh
 
 
 
-- In the [output_files](./output_files) directory, the output files of the training process of the NequIP MLIP model is provided.
 - The trained NequIP model parameter file can be found in the corresponding subdirectory of the `output_files` directory, or in the external [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0).
 - The dataset file molecules.db is not included in this repository due to its size, but it can be found from the external [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0).
 

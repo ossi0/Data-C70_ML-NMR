@@ -1,4 +1,4 @@
-# He@C<sub>70</sub><sup>6-</sup> and He<sub>2</sub>@C<sub>70</sub><sup>6-</sup> DFT Calculations
+# He@C<sub>70</sub><sup>6-</sup> and He<sub>2</sub>@C<sub>70</sub><sup>6-</sup> energy and gradient DFT Calculations
 
 📄 Authors: **Ouail Zakary** and **Ossi Laurila**
 

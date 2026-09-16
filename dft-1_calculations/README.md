@@ -65,7 +65,7 @@ To start the calculation, all the necessary ORCA input files should be included 
 - **Calculation Type**: DFT optimization
 
 ### DFT Methods
-- **DFT level**: `\omegaB97X-3c` composite hybrid method
+- **DFT level**: `ωB97X-3c` composite hybrid method
 - **Basis Set**:  
 - `vDZP` for both helium and carbon atoms
 - **Auxiliary basis set**:
@@ -81,7 +81,7 @@ ORCA `**TightSCF**` criteria used:
 - **DIIS error convergence (TolErr)**: 5<sup>-7</sup>
 - **orbital gradient convergence (TolG)**: 1<sup>-5</sup>
 - **orbital rotation angle convergence (TolX)**: 1<sup>-5</sup>
-- **ConvCheckMode = 2**: check change in total energy and in one-electron energy; converged if \Delta(Etot) < TolE and \Delta(E1) < 1<sup>-3</sup>*TolE
+- **ConvCheckMode = 2**: check change in total energy and in one-electron energy; converged if Δ(Etot) < TolE and Δ(E1) < 1<sup>-3</sup>*TolE
 
 ### System Properties
 - **Number of Atoms**: 71/72

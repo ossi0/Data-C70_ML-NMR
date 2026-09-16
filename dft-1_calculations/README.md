@@ -37,23 +37,23 @@ Calculation directory structure example:
 ```
 To start the calculation, all the necessary ORCA input files should be included in the desired directory. The calculation produces the following output files:
 ```
-    `energy`, 
-    `opt.engrad`, 
-    `jobfile.err<JOB_ID>`, 
-    `jobfile.out<JOB_ID>`, 
-    `Jobid_is_<JOB_ID>`, 
-    `opt_atom6.bibtex`,
-    `opt_atom6.densities`,
-    `opt_atom6.densitiesinfo`,
-    `opt_atom6.out`,
-    `opt_atom6.property.txt`,
-    `opt_bibtex`,
-    `opt_densities`,
-    `opt_densitiesinfo`,
-    `opt_gbw`,
-    `opt_out`,
-    `opt_property.txt`, and
-    `opt.xyz`
+    energy 
+    opt.engrad 
+    jobfile.err<JOB_ID> 
+    jobfile.out<JOB_ID> 
+    Jobid_is_<JOB_ID> 
+    opt_atom6.bibtex 
+    opt_atom6.densities 
+    opt_atom6.densitiesinfo 
+    opt_atom6.out 
+    opt_atom6.property.txt 
+    opt_bibtex 
+    opt_densities 
+    opt_densitiesinfo 
+    opt_gbw 
+    opt_out 
+    opt_property.txt 
+    opt.xyz 
 ```
     
 

@@ -40,9 +40,9 @@ The structure of each directory is:
 - Note that the MLPIMD simulations of He<sub>2</sub>@C<sub>70</sub><sup>6-</sup> are conducted as are the He@C<sub>70</sub><sup>6-</sup>, with only the initial geometry `init.xyz`, and the checkpoint file `PREFIX.chk` differing from the corresponding files used in the He@C<sub>70</sub><sup>6-</sup> simulations
 
 The `IPI_INPUT`variable in the `job_base.sh` script must be set to
-  ####input.xml####
+  **input.xml**
 - in the case of running an equilibrium simulation
-and to ####PREFIX.chk#### if intending to
+and to **PREFIX.chk** if intending to
 - run a production simulation run starting from the equilibrated simulation state, or 
 - continuing the simulation in a new simulation run starting from the last simulation state in the previous simulation run 
 

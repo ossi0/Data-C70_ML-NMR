@@ -1,0 +1,23 @@
+#!/bin/bash
+#SBATCH -J p16_an
+#SBATCH --partition=small
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=16  # MPI tasks per node
+#SBATCH --account=plantto     # insert here the project to be billed
+#SBATCH --time=12:00:00       # time as `hh:mm:ss`
+#SBATCH -e jobfile.err%J
+#SBATCH -o jobfile.out%J
+
+module purge
+module load gcc/11.2.0 openmpi/4.1.2 openblas/0.3.18-omp
+export ORCADIR=/projappl/plantto/orca_6_1_1_linux_x86-64_shared_openmpi418_avx2
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORCADIR
+
+# create a mpirun script that executes srun
+echo exec 'srun $(echo "${@}" | sed 's/^-np/-n/')' >./mpirun
+chmod +x ./mpirun
+export PATH=${SLURM_SUBMIT_DIR}:${PATH}
+touch Jobid_is_$SLURM_JOB_ID
+
+${ORCADIR}/orca opt.inp > opt.out
+rm -f  ${SLURM_SUBMIT_DIR}/mpirun

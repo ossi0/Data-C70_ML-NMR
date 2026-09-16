@@ -76,12 +76,12 @@ To start the calculation, all the necessary ORCA input files should be included 
 ### SCF Parameters
 ORCA `**TightSCF**` criteria used:
 - **energy change between two cycles (TolE)**: 10<sup>-8</sup>
-- **RMS density change (TolRMSP)**: 5<sup>-9</sup>
-- **maximum density change (TolMaxP)**: 1<sup>-7</sup>
-- **DIIS error convergence (TolErr)**: 5<sup>-7</sup>
-- **orbital gradient convergence (TolG)**: 1<sup>-5</sup>
-- **orbital rotation angle convergence (TolX)**: 1<sup>-5</sup>
-- **ConvCheckMode = 2**: check change in total energy and in one-electron energy; converged if Δ(Etot) < TolE and Δ(E1) < 1<sup>-3</sup>*TolE
+- **RMS density change (TolRMSP)**: 5.0<sup>-9</sup>
+- **maximum density change (TolMaxP)**: 1.0<sup>-7</sup>
+- **DIIS error convergence (TolErr)**: 5.0<sup>-7</sup>
+- **orbital gradient convergence (TolG)**: 1.0<sup>-5</sup>
+- **orbital rotation angle convergence (TolX)**: 1.0<sup>-5</sup>
+- **ConvCheckMode = 2**: check change in total energy and in one-electron energy; converged if Δ(Etot) < TolE and Δ(E1) < 1.0<sup>-3</sup>*TolE
 
 ### System Properties
 - **Number of Atoms**: 71/72

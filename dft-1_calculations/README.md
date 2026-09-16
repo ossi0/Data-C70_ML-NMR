@@ -95,10 +95,10 @@ ORCA `**TightSCF**` criteria used:
 ## Requirements to Reproduce This Data
 - **Package**: [ORCA V6.1.1](https://www.faccts.de/docs#orca)
 - **Input files**:
-  - [opt.inp](./DFT-1/cluster_1000/opt.inp): Orca input file
-  - [coordinates.xyz](./DFT-1/cluster_1000/coordinates.xyz): Coordinate file in xyz format
+  - [opt.inp](./cluster_1000/opt.inp): Orca input file
+  - [coordinates.xyz](./cluster_1000/coordinates.xyz): Coordinate file in xyz format
 - **Additional scripts**:
-  - [mahti_orca.job](./DFT-1/cluster_1000/mahti_orca.job): Script to call ORCA DFT optimisation calculation in supercomputer Mahti ([https://www.mahti.csc.fi/public](https://www.mahti.csc.fi/public/)/)
+  - [mahti_orca.job](./cluster_1000/mahti_orca.job): Script to call ORCA DFT optimisation calculation in supercomputer Mahti ([https://www.mahti.csc.fi/public](https://www.mahti.csc.fi/public/)/)
  
 ### Workflow of DFT calculations
 

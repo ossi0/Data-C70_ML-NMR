@@ -42,8 +42,9 @@ The structure of each directory is:
 The `IPI_INPUT`variable in the `job_base.sh` script must be set to
   **input.xml**
 - in the case of running an equilibrium simulation
-and to **PREFIX.chk** if intending to
-- run a production simulation run starting from the equilibrated simulation state, or 
+
+and to **PREFIX.chk**
+- if intending to run a production simulation run starting from the equilibrated simulation state, or 
 - continuing the simulation in a new simulation run starting from the last simulation state in the previous simulation run 
 
 ## Workflow

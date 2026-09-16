@@ -1,8 +1,8 @@
 <simulation mode='static' verbosity='medium'>
   <output prefix='PREFIX'>
     <checkpoint filename='chk' stride='10000'></checkpoint>
-    <properties stride='10' filename='out'>  [ step, potential{electronVolt}, temperature{kelvin} ] </properties>-->
-    <trajectory stride='10' filename='pos'>  positions{angstrom}  </trajectory>
+    <properties stride='20' filename='out'>  [ step, potential{electronVolt}, temperature{kelvin} ] </properties>-->
+    <trajectory stride='20' filename='pos'>  positions{angstrom}  </trajectory>
     <trajectory stride='200' filename='for'>  forces  </trajectory>
   </output>
   <ffsocket mode='inet' name='driver' pbc='False'>

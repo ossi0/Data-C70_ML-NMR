@@ -68,6 +68,10 @@ The dataset **molecules.xyz** was prepared using a Python script (`createxyz.py`
 2. Reads DFT energy and forces from ORCA output file `opt.engrad`
 3. Creates xyz file (`ref.xyz`) of the structure with DFT target energy and forces
 
+### `create_db.py`
+
+1. Reads the molecules.xyz file
+2. Writes the structures to the molecules.db file one by one
 
 ### Running the Script
 

@@ -62,11 +62,11 @@ After running the simulation, you will have the following output files:
     error.out             # Output file for printing errors occurring during the simulation
     RESTART               # File produced when the simulation finishes cleanly, in order to restart the simulation
     PREFIX.out            # Output file containing energy, temperature, etc. of the system during the simulation
-    PREFIX.for_<P>.xyz    # xyz-file containing the forces components acting on the atoms at intervals of simulation steps
-    PREFIX.pos_<P>.xyz    # xyz-file containing the positions of the atoms at intervals of simulation steps
+    PREFIX.for_<p>.xyz    # xyz-file containing the forces components acting on the atoms at intervals of simulation steps
+    PREFIX.pos_<p>.xyz    # xyz-file containing the positions of the atoms at intervals of simulation steps
     PREFIX.chk            # Checkpoint file produced, containing the exact state of the simulation at given simulation step
 ```
-
+- <p> is the bead number, and it ranges from 0 to P-1, with P being the bead number used in the PIMD simulation
 ---
 
 For further details, please refer to the respective folders or contact the author via the provided email.

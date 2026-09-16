@@ -1,0 +1,24 @@
+! wB97X-3c vDZP DEFGRID3 TightSCF EnGrad
+%maxcore 2000
+
+%pal
+ nprocs 16
+end
+
+* xyzfile -6 1  coordinates.xyz
+
+%method
+ GRIDPRUNING UNPRUNED
+ HGridReduced   false
+ COSXHGRIDREDUCED false
+end
+
+%scf
+  AutoStart true
+  MaxIter   500
+end
+
+
+%output
+ XYZFile true
+end

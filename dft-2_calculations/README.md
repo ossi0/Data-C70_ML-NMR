@@ -48,6 +48,7 @@ x2t coordinates_<ID>.xyz > coord
 ```
 To start the calculation, all the necessary TURBOMOLE input files should be included in the desired directory. The calculation produces the following output files:
 ```
+./cluster_<ID>/
     energy 
     gradient 
     jobfile.err<JOB_ID> 

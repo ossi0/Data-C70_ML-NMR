@@ -22,8 +22,7 @@ All the necessary files needed to start the MD simulation with DFTB+ are provide
 ```
 ./
      dftb_in.hsd        # The main input file for DFTB+
-     geom.out.gen       # The initial He@C70/He2@C70 configuration in the generic format
-     geom.out.xyz       # The initial He@C70/He2@C70 configuration in the xyz format
+     geometry.xyz       # The initial He@C70/He2@C70 configuration in the xyz format
      puhti_dftb.job     # Job script to run DFTB+ in Puhti HPC
      prepare.sh         # Shell script for preparing DFT calculations, not used in DFTB+ simulation
 ```

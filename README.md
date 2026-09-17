@@ -29,9 +29,8 @@ The repository comprises the following sections:
 3. Example of training, validation, and testing processes for a MLIP model using NequIP architecture. ([directory](./nequip-ml_model/))  
 4. Machine learning-assisted path-integral MD simulations. ([directory](./pimd_simulations/))  
 5. Dataset preparation for the NMR-ML model:  
-   i. Configuration generation using MLMD simulations. ([directory](./mlmd-data_generation/))  
-   ii. DFT calculations for the NMR-ML model. ([directory](./dft-2_calculations/))  
-   iii. Dataset format for the NMR-ML model. ([directory](./nmr-ml_dataset/))  
+   i. Configuration generation and DFT calculations for the NMR-ML model. ([directory](./dft-2_calculations/))  
+   ii. Dataset format for the NMR-ML model. ([directory](./nmr-ml_dataset/))  
 6. Training, validation, and testing processes for the NMR-ML model using MatTen architecture on NMR magnetic shielding parameters. ([directory](./nmr-ml_model/))  
 7. Prediction of NMR magnetic shielding tensors, *σ*, from the pre-trained NMR-ML model. ([directory](./nmr-ml_prediction/))  
 8. Python scripts and raw numerical data for all figures related to the NMR-ML model included in the main manuscript and the Supporting Information. ([directory](./figures/))  

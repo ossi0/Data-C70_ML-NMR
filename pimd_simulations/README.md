@@ -57,7 +57,8 @@ Necessary files to start PIMD simulation using [i-PI](https://github.com/i-pi/i-
 ```bash
 sbatch job_base.sh
 ```
-
+- Note that the job script `job_base.sh` must always be configured according to the specific HPC cluster or environment in which it is intended to be used
+  
 ## Output Files
 
 After running the simulation, you will have the following output files:

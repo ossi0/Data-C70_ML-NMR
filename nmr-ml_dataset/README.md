@@ -12,7 +12,7 @@
 
 ---
 
-The dataset preparation for the training of MatTen NMR-ML architecture is comprehensively described in [this](https://github.com/ozakary/NMR-MatTen) GitHub repository, by Ouail Zakary.
+The dataset preparation for the training of MatTen NMR-ML architecture is comprehensively described in [this](https://github.com/ozakary/NMR-MatTen) GitHub repository, maintained by Ouail Zakary.
 
 
 ## Dataset Files

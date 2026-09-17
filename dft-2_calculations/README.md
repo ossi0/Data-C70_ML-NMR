@@ -123,7 +123,7 @@ To start the calculation, all the necessary TURBOMOLE input files should be incl
 
 ---
 
-- **Computational Resource**: [CSC](https://csc.fi/) Supercomputer [MAHTI](https://www.mahti.csc.fi/public/)
+- **Computational Resource**: [CSC](https://csc.fi/) Supercomputers [PUHTI](https://www.puhti.csc.fi/public/) and [MAHTI](https://www.mahti.csc.fi/public/)
 
   
 - For details, please refer to the respective folders or contact the author via the provided email.

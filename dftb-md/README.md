@@ -22,7 +22,6 @@ All the necessary files needed to start the MD simulation with DFTB+ are provide
 ```
 ./
      dftb_in.hsd        # The main input file for DFTB+
-     dftb_pin.hsd       # Processed and parsed input file created by the DFTB+ software, preferred over dftb_in.hsd to repeat the simulation
      geom.out.gen       # The initial He@C70/He2@C70 configuration in the generic format
      geom.out.xyz       # The initial He@C70/He2@C70 configuration in the xyz format
      puhti_dftb.job     # Job script to run DFTB+ in Puhti HPC
@@ -30,8 +29,25 @@ All the necessary files needed to start the MD simulation with DFTB+ are provide
 ```
 
 - Note that if you want to exactly repeat the calculation, you are strongly suggested to remove the `dftb_in.hsd`, and then rename the file `dftb_pin.hsd` as `dftb_in.hsd`  
-- The additional script file `prepare.sh` is used after the DFTB+ simulation has finished to extract snapshot structures from the simulation trajectory.
+- The additional script file `prepare.sh` is used after the DFTB+ simulation has finished to extract snapshot structures from the simulation trajectory
+- Input directories used to start the SEMD simulations are provided at [C70_He_mono](./C70_He_mono) and [C70_He_di](./C70_He_di), for the He@C<sub>70</sub> and He<sub>2</sub>@C<sub>70</sub> structures, respectively
 
+### DFTB+ output files
+
+Running the DFTB+ simulation provides the following output files.
+```
+./
+     band.out          # The main input file for DFTB+
+     charges.bin
+     detailed.out       # General information about the simulation
+     dftb.log           # Log file of the simulation
+     geo_end.gen        # Last configuration of the simulation in .gen format
+     geo_end.xyz        # Full simulation trajectory in .xyz format
+     md.out             # Detailed output file containing energy, temperature, etc. of the system during the simulation
+     results.tag
+     slurm-<JOB_ID>.out # Output file for prints from the job script
+     dftb_pin.hsd       # Processed and parsed input file created by the DFTB+ software, preferred over dftb_in.hsd to repeat the simulation
+```
 
 ### Scripts
 
@@ -52,7 +68,7 @@ Running the script with the command `./prepare.sh` creates the following file st
 ```
 Note that the first selected configuration is `cluster_50000`, since the beginning of the semi-empirical MD simulation is discarded due to the equilibration stage of the simulation.
 
-Follow the instruction in [dft-1_calculations](../dft-1_calculations) or [dft-2_calculations](../dft-2_calculations) to run the DFT calculations for the sample configurations.
+Follow the instruction in [dft-1_calculations](../dft-1_calculations) to run the DFT calculations for the sample configurations.
 
 
 ---

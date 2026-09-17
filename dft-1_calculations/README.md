@@ -37,6 +37,7 @@ Calculation directory structure example:
 ```
 To start the calculation, all the necessary ORCA input files should be included in the desired directory. The calculation produces the following output files:
 ```
+./cluster_<ID>/
     energy 
     opt.engrad 
     jobfile.err<JOB_ID> 

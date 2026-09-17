@@ -1,0 +1,30 @@
+#!/bin/bash
+#SBATCH -J di_NMR
+#SBATCH --partition=small
+#SBATCH --nodes=1            # for SMP only 1 is possibl
+#SBATCH --cpus-per-task=40    # SMP threads
+#SBATCH --account=plantto    # insert here the project to be billed
+#SBATCH --time=02:00:00      # time as hh:mm:ss
+#SBATCH -e jobfile.err%J
+#SBATCH -o jobfile.out%J
+#SBATCH --mem-per-cpu=500
+
+module load turbomole/7.9
+ulimit -s unlimited
+ export PARA_ARCH=SMP         # use SMP
+# export PARA_ARCH=MPI         # use MPI
+export MPI_USESRUN=1
+export SLURM_MPI_TYPE=pmi2
+export SLURM_CPU_BIND=none
+export I_MPI_PIN_DOMAIN=auto,compact
+
+export TURBOTMPDIR=`echo $PWD |cut -d'/' -f1-3`"/TM_TMPDIR_OSSI/"$SLURM_JOB_ID
+mkdir -p $TURBOTMPDIR
+export PARNODES=$SLURM_CPUS_PER_TASK  # for SMP
+##export PARNODES=$SLURM_NTASKS # for MPI
+export PATH=$TURBODIR/bin/`$TURBODIR/scripts/sysname`:$PATH
+export TMPDIR=$TURBOTMPDIR
+
+ridft > ridft.out
+rdgrad > rdgrad.out
+mpshift > mpshift.out

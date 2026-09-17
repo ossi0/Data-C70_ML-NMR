@@ -65,3 +65,65 @@ To start the calculation, all the necessary TURBOMOLE input files should be incl
 ### General Settings
 - **Program Package**: `TURBOMOLE V7.8`
 - **Systems**: He@C<sub>70</sub><sup>6-</sup> and He<sub>2</sub>@C<sub>70</sub><sup>6-</sup> endohedral fullerenes
+- **Calculation Type**: DFT optimization and NMR magnetic shielding parameters calculation
+
+### DFT Methods
+- **DFT level**: `B3LYP` hybrid functional
+- **Basis Set**:  
+  - `def2-TZVP` for carbon atoms
+  - `pcSseg-3` for helium atoms
+- **Auxiliary basis set**:
+  - `universal` for both carbon and helium atoms
+- **Grid size**:
+  - 6
+- **Diffuse**:
+  - 5 
+
+### SCF Parameters
+- **Convergence Criterion**: 1.0<sup>-7</sup> atomic units
+- **Maximum Iterations**: 100
+- **Convergence Acceleration**:
+  - Damping (start=2.700, step=0.050, min=0.100)
+  - Direct Inversion in the Iterative Subspace (`DIIS`)
+
+ ### NMR Calculations
+- **Method**: `MPSHIFT` module with gauge-including atomic orbital (`GIAO`) approach
+- **Functional**: `B3LYP` (same as optimization)
+
+### System Properties
+- **Number of Atoms**: 71/72
+- **Basis set**: 
+  - total number of primitive shells: 37
+  - total number of contracted shells: 792
+  - total number of cartesian basis functions: 2596
+  - total number of SCF-basis functions: 2236
+- **Auxiliary Coulomb fitting Basis**: 
+  - total number of primitive shells:   32
+  - total number of contracted shells: 1060
+  - total number of cartesian basis functions: 4294
+  - total number of SCF-basis functions: 3452
+
+## Requirements to Reproduce This Data
+- **Package**: [TURBOMOLE V7.8](https://www.turbomole.org)
+- **Input files**:
+  - [basis](./input_files/basis): Basis set definition
+  - [control](./input_files/control): Main input control file
+  - [coord](./input_files/coord): Cartesian coordinates file
+  - [coord_ID.xyz](./input_files/coord.xyz): Coordinate file in xyz format
+  - [auxbasis](./input_files/auxbasis): Auxiliary basis set for RI approximation
+  - mos: Turbomole input file containing the molecular orbitals.
+- **Computational Resources**: [CSC](https://csc.fi/) Supercomputers [PUHTI](https://www.puhti.csc.fi/public/) and [MAHTI](https://www.mahti.csc.fi/public/)
+- The Turbomole calculations can be started in Puhti with the job script found [here](./cluster_1000/tm_puhti.job)
+ 
+### Workflow of DFT calculations
+
+1. Perform initial guess for the molecular orbitals to obtain the initial `mos` file by running the `define` command of TURBOMOLE, or by copying an existing `mos` file to the calculation directory from a previous calculation of the same type
+2. Call the job script to start the calculation
+3. Extract and analyse the results
+
+---
+
+- **Computational Resource**: [CSC](https://csc.fi/) Supercomputer [MAHTI](https://www.mahti.csc.fi/public/)
+
+  
+- For details, please refer to the respective folders or contact the author via the provided email.

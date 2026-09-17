@@ -63,7 +63,7 @@ To start the calculation, all the necessary TURBOMOLE input files should be incl
 ## Computational Details
 
 ### General Settings
-- **Program Package**: `TURBOMOLE V7.8`
+- **Program Package**: `TURBOMOLE V7.9`
 - **Systems**: He@C<sub>70</sub><sup>6-</sup> and He<sub>2</sub>@C<sub>70</sub><sup>6-</sup> endohedral fullerenes
 - **Calculation Type**: DFT optimization and NMR magnetic shielding parameters calculation
 
@@ -104,7 +104,7 @@ To start the calculation, all the necessary TURBOMOLE input files should be incl
   - total number of SCF-basis functions: 3452
 
 ## Requirements to Reproduce This Data
-- **Package**: [TURBOMOLE V7.8](https://www.turbomole.org)
+- **Package**: [TURBOMOLE V7.9](https://www.turbomole.org)
 - **Input files**:
   - [basis](./input_files/basis): Basis set definition
   - [control](./input_files/control): Main input control file

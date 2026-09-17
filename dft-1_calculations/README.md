@@ -20,7 +20,7 @@ ADD LINK
 
 ## Overview of the Data
 
-This project contains computational data for He@C<sub>70</sub><sup>6-</sup> and He<sub>2</sub>@C<sub>70</sub><sup>6-</sup> structures. Each structure was computed using the computational conditions described in the sections below.  
+This project contains computational conditions for He@C<sub>70</sub><sup>6-</sup> and He<sub>2</sub>@C<sub>70</sub><sup>6-</sup> structures. Each structure was computed using the computational conditions described in the sections below.  
 
 The reference DFT values are calculated for all structures in the reference dataset at the DFT-1 theory level with ORCA as described in the paper.
 

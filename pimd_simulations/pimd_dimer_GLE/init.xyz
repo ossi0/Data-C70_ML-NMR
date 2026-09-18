@@ -1,5 +1,5 @@
 72
-Lattice="50.0 0.0 0.0 0.0 50.0 0.0 0.0 0.0 50.0" Properties=species:S:1:pos:R:3:forces:R:3 energy=-10966.612607079102 pbc="F F F"
+# CELL(abcABC):   40.0  40.0  40.0  90.0  90.0  90.0  cell{angstrom} Traj: positions{angstrom}
 C 0.32338125 -3.48909613 0.21050574
 C -0.52181365 -3.36940286 1.31130133
 C -0.04381040 -2.83463596 2.57282236

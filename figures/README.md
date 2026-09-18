@@ -1,0 +1,65 @@
+# Figures, Scripts, and Datasets for Manuscript and Supporting Information “*Machine Learning For NMR Observables Sensitive to Nuclear Quantum Effects*”
+
+📄 Authors: **Ouail Zakary** and **Ossi Laurila**
+
+---
+
+👤 Corresponding Author: **Ouail Zakary**  
+- 📧 Email: [Ouail.Zakary@oulu.fi](mailto:Ouail.Zakary@oulu.fi)  
+- 🔗 ORCID: [0000-0002-7793-3306](https://orcid.org/0000-0002-7793-3306)  
+- 🌐 Website: [Personal Webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
+- 📁 Portfolio: [Academic Portfolio](https://ozakary.github.io/)
+
+--- 
+
+This folder contains the figures, Python scripts, datasets, and additional metadata (README and description files) used to generate the figures related to the NMR-ML model in the paper and supporting information documents of “***Machine Learning For NMR Observables Sensitive to Nuclear Quantum Effects***”.
+
+## Requirements
+
+To reproduce the figures and analyze the data, you will need the following:
+- **Python 3.x**
+- **Matplotlib**
+- **NumPy**
+- **Pandas**
+- **SciPy**
+- **Sklearn**
+- **Seaborn**
+- **os**
+
+## Table 1: Figures from the Manuscript
+
+| **Figure** | **Script** | **Dataset** | **Readme** | **Description** |
+|------------|-------------|-------------|------------|-----------------|
+| [Figure 1](./manuscript/figure_1.png) | N/A | N/A | [Readme](./manuscript/figure_1_readme.txt) | [Description](./manuscript/figure_1_description.txt) |  
+| [Figure 2](./manuscript/figure_2.png) | [Script](./manuscript/figure_2_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./manuscript/figure_2_readme.txt) | [Description](./manuscript/figure_2_description.txt) |  
+| [Figure 3](./manuscript/figure_3.png) | [Script](./manuscript/figure_3_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./manuscript/figure_3_readme.txt) | [Description](./manuscript/figure_3_description.txt) |  
+| [Figure 4](./manuscript/figure_4.png) | [Script](./manuscript/figure_4_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./manuscript/figure_4_readme.txt) | [Description](./manuscript/figure_4_description.txt) |  
+| [Figure 5](./manuscript/figure_5.png) | [Script](./manuscript/figure_5_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./manuscript/figures_5_readme.txt) | [Description](./manuscript/figure_5_description.txt) |  
+| [Figure 6](./manuscript/figure_6.png) | [Script](./manuscript/figure_6_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./manuscript/figures_6_readme.txt) | [Description](./manuscript/figure_6_description.txt) |  
+| [Figure 7](./manuscript/figure_7.png) | [Script](./manuscript/figure_7_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./manuscript/figures_7_readme.txt) | [Description](./manuscript/figure_7_description.txt) |  
+
+## Table 2: Figures from the Supporting Information
+
+| **Figure** | **Script** | **Dataset** | **Readme** | **Description** |
+|------------|------------|-------------|------------|-----------------|
+| [Figure S1](./supporting_information/figure_S1.png) | [Script](./supporting_information/figure_S1_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./supporting_information/figures_S1_readme.txt) | [Description](./supporting_information/figure_S1_description.txt) |
+| [Figure S2](./supporting_information/figure_S2.png) | [Script](./supporting_information/figure_S2_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./supporting_information/figures_S2_readme.txt) | [Description](./supporting_information/figure_S2_description.txt) |
+| [Figure S3](./supporting_information/figure_S3.png) | [Script](./supporting_information/figure_S3_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./supporting_information/figures_S3_readme.txt) | [Description](./supporting_information/figure_S3_description.txt) |
+| [Figure S4](./supporting_information/figure_S4.png) | [Script](./supporting_information/figure_S4_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./supporting_information/figures_S4_readme.txt) | [Description](./supporting_information/figure_S4_description.txt) |
+| [Figure S5](./supporting_information/figure_S5.png) | [Script](./supporting_information/figure_S5_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./supporting_information/figures_S5_readme.txt) | [Description](./supporting_information/figure_S5_description.txt) |
+| [Figure S6](./supporting_information/figure_S6.png) | [Script](./supporting_information/figure_S6_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./supporting_information/figure_S6_readme.txt) | [Description](./supporting_information/figure_S6_description.txt) |
+| [Figure S7](./supporting_information/figure_S7.png) | N/A | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./supporting_information/figures_S7_reamde.txt) | [Description](./supporting_information/figure_S7_description.txt) |
+| [Figure S8](./supporting_information/figure_S8.png) | [Script](./supporting_information/figure_S8_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./supporting_information/figures_S8_reamde.txt) | [Description](./supporting_information/figure_S8_description.txt) |
+
+---
+
+### Highlights:
+- Links to all figures, scripts, datasets, readme, and description files.
+- For each figure, if a script or dataset is not applicable, it is indicated as `N/A`.
+- Organized figures into two categories: Manuscript and Supporting Information for clarity.
+
+Feel free to browse through the figures, and check the corresponding scripts and datasets. Ensure all dependencies are installed before attempting to run the scripts for reproducibility.
+
+---
+
+For further details, please refer to the respective folders or contact the author via the provided email.

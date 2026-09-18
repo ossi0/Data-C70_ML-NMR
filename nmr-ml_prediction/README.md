@@ -179,6 +179,7 @@ for i in $(seq 0 1 <P-1>); do
   cd ..
 done
 ```
+- Note that you can select which atom’s NMR shielding to process by changing the atom index in the argument of the `grep` command
 
 Now you can calculate the bead-averaged isotropic NMR magnetic shielding values by running the script
 
@@ -186,62 +187,29 @@ Now you can calculate the bead-averaged isotropic NMR magnetic shielding values 
 python3 calc_avg.py
 ```
 - Note that you should change the variable called `beads` in the script to the correct value
+- In the case of `P = 1`, this step is redundant as there is no averaging to be calculated, and the file `sig.txt` found from the directory `./0/` can be used
 
 The script produces a file `sig_avg.txt` containing the bead-averaged isotropic NMR magnetic shielding values with one value per line
 
 
 ## Script Functions
 
-### `code_seperate.py`
+### `calc_avg.py`
 
-This script reads a trajectory XYZ file and splits it into chunks of 1001 structures. It identifies structure boundaries in the XYZ file by looking for the "60" marker (corresponding to the number of atoms in C60) and creates separate files with the specified number of structures.
+This script reads the bead-specific isotropic NMR magnetic shielding values from the `sig.txt` files in each bead directory, and calculates the bead-averaged isotropic NMR magnetic shielding values line by line to the ´sig_avg.txt´ file.
 
-### `code_convert.py`
+### `avg.py`
 
-This script converts XYZ files to the CSV format required by SchNet. It creates a CSV file with the following columns:
-- molecule_name (e.g., "empty_fullerene_100000")
-- atom_index (0-59 for each atom in C60)
-- atom (always "C" for carbon)
-- x, y, z (atomic coordinates)
-
-### `ml-predict.py`
-
-This script loads the pre-trained SchNet model and predicts NMR isotropic shielding values for the provided structures. It:
-1. Creates a SchNetPack-compatible database from the CSV file
-2. Loads the pre-trained model
-3. Makes predictions for each structure
-4. Saves the results with the original structural information
-
-### `concat_csvs.py`
-
-This script concatenates the prediction results from each chunk into a single file per bead. It collects all `sigma_iso_new_predictions_with_structures.csv` files from each chunk directory and combines them into a single CSV file in the parent bead directory.
+This script calculates and prints the average isotropic NMR magnetic shielding value over the values found in the `sig_avg.txt` file. Additionally, the standard error of mean (SEM) associated with the shielding value, is calculated and printed.
 
 ## Job Script Details
 
-The `nmr-ml_predict_schnet_carpo2.job` script:
-- Allocates 4 NVIDIA V100 GPUs
-- Uses 16 CPU cores (4 tasks × 4 CPUs per task)
+The `script_predict.job` and `script_predict.job<N>` scripts:
+- Uses 1 CPU core per job
 - Runs for up to 3 days
-- Activates the SchNet virtual environment
-- Processes each chunk of each bead sequentially, running the prediction script with appropriate parameters
-
-## Output Files
-
-After running the complete workflow, you will have the following output files:
-
-1. In each bead folder (from 0 to 31):
-   - `./0/predicted_sigma_iso_beads_0.csv`
-   - `./1/predicted_sigma_iso_beads_1.csv`
-   - ...
-   - `./31/predicted_sigma_iso_beads_31.csv`
-
-2. In each chunk folder (for all beads and chunks):
-   - `./0/1/split_beads_dump_0_1.xyz` (Split trajectory chunk)
-   - `./0/1/converted_split_beads_dump_0_1.csv` (Converted data for SchNet)
-   - `./0/1/CHAMPS_new_test.db` (Database file for SchNet)
-   - `./0/1/sigma_iso_new_predictions_with_structures.csv` (Prediction results)
-   - ...
-   - `./31/5/sigma_iso_new_predictions_with_structures.csv`
+- Activates the MatTen virtual environment
+- Processes each chunk of each bead sequentially
+- Outputs the NMR magnetic shielding tensors
 
 ---
 

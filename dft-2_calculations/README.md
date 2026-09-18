@@ -122,6 +122,7 @@ To start the calculation, all the necessary TURBOMOLE input files should be incl
 2. Call the job script to start the calculation
 3. Extract and analyse the results
 
+- Note that the job script `tm_puhti.job` must always be configured according to the specific HPC cluster or environment in which it is intended to be used
 ---
 
 - **Computational Resource**: [CSC](https://csc.fi/) Supercomputers [PUHTI](https://www.puhti.csc.fi/public/) and [MAHTI](https://www.mahti.csc.fi/public/)

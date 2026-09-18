@@ -18,7 +18,7 @@ The training process of a MatTen model is briefly described here.
 
 ### Input files
 
-Training of a MatTen model requires the input file `atomic_tensor.yaml` to specify the training protocol, and the dataset files `dataset_train.json`, `dataset_val.json`, and `dataset_test.json`, as well as the training script file ´train_atomic_tensor.py´.
+Training of a MatTen model requires the input file `atomic_tensor.yaml` in which the training protocol is specified, and the dataset files `dataset_train.json`, `dataset_val.json`, and `dataset_test.json`, as well as the training script file ´train_atomic_tensor.py´.
 
 ```
 training_run/                      # Training directory

@@ -23,6 +23,7 @@ To reproduce the figures and analyze the data, you will need the following:
 - **Pandas**
 - **SciPy**
 - **Sklearn**
+- **Seaborn**
 - **os**
 
 ## Table 1: Figures from the Manuscript

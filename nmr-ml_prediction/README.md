@@ -191,6 +191,21 @@ python3 calc_avg.py
 
 The script produces a file `sig_avg.txt` containing the bead-averaged isotropic NMR magnetic shielding values with one value per line
 
+## Output Files
+
+Performing the steps above provides you the following output files:
+
+```
+./0/
+    predictions.csv   # Full NMR magnetic shielding predictions, one prediction per line
+    sig.txt           # Isotropic values of the NMR magnetic shielding tensors, one value per line
+...
+./<P-1>/
+    predictions.csv   # Full NMR magnetic shielding predictions, one prediction per line
+    sig.txt           # Isotropic values of the NMR magnetic shielding tensors, one value per line
+
+./sig_avg.txt         # Bead-averaged isotropic values of the NMR magnetic shielding tensors, one value per line
+```
 
 ## Script Functions
 

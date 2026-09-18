@@ -86,7 +86,7 @@ for i in $(seq 0 1 <P-1>); do
   cd ../
 done
 ```
-- Note that this step can be included in the `script_predict.job` script (example found [here](./NMR-P!_monomer/0/script_predict.job)), if doing no parallel prediction calculations
+- Note that this step can be included in the `script_predict.job` script (example found [here](./NMR-P1_monomer/0/script_predict.job)), if doing no parallel prediction calculations
 
 
 ### 3. Run Prediction Job
@@ -182,7 +182,7 @@ done
 
 Now you can calculate the bead-averaged isotropic NMR magnetic shielding values by running the script
 
-``bash
+```bash
 python3 calc_avg.py
 ```
 - Note that you should change the variable called `beads` in the script to the correct value

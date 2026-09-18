@@ -38,6 +38,7 @@ The structure of each directory is:
 ```
 
 - Note that the MLPIMD simulations of He<sub>2</sub>@C<sub>70</sub><sup>6-</sup> are conducted as are the He@C<sub>70</sub><sup>6-</sup>, with only the initial geometry `init.xyz`, and the checkpoint file `PREFIX.chk` differing from the corresponding files used in the He@C<sub>70</sub><sup>6-</sup> simulations
+- The trained MLIP model file `gpumodel.nequip.pt2` can be found from the [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) of this project
 
 The `IPI_INPUT`variable in the `job_base.sh` script must be set to
   **input.xml**

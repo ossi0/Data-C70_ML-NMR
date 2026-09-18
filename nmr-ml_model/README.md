@@ -58,7 +58,7 @@ training_run/
 │   │       └── best.ckpt      # Parameters of the so far best model from the training process
 │   ├── matten.log             # General log file of the training
 │   ├── nmr-ml_matten-errors_<JOB-ID>.txt     # Errors output file of the job script
-│   └──  nmr-ml_matten-output_<JOB_ID>.txt    # Output file of the job script
+│   └──  nmr-ml_matten-output_<JOB-ID>.txt    # Output file of the job script
 ```
 
 ### Compiling the model

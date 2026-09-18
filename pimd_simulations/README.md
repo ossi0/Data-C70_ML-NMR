@@ -19,7 +19,11 @@ Example PIMD simulation runs with the resulting output files for the He@C<sub>70
 
 
 ### PIMD simulations of He@C<sub>70</sub><sup>6-</sup>
-Four sub-directories are provided, which include the input files to start the equilibrium and production simulation runs
+Eight sub-directories are provided, which include the input files to start the equilibrium and production simulation runs
+- [pimd_dimer_GLE](./pimd_dimer_GLE)
+- [pimd_dimer_PILE-G](./pimd_dimer_PILE-G)
+- [pimd_dimer_PIGLET-P4](./pimd_dimer_PIGLET-P4)
+- [pimd_dimer_PIGLET-P8](./pimd_dimer_PIGLET-P8)
 - [pimd_mono_GLE](./pimd_mono_GLE)
 - [pimd_mono_PILE-G](./pimd_mono_PILE-G)
 - [pimd_mono_PIGLET-P4](./pimd_mono_PIGLET-P4)
@@ -37,7 +41,6 @@ The structure of each directory is:
     PREFIX.chk              # Checkpoint file for the simulation settings and protocol to continue the simulation
 ```
 
-- Note that the MLPIMD simulations of He<sub>2</sub>@C<sub>70</sub><sup>6-</sup> are conducted as are the He@C<sub>70</sub><sup>6-</sup>, with only the initial geometry `init.xyz`, and the checkpoint file `PREFIX.chk` differing from the corresponding files used in the He@C<sub>70</sub><sup>6-</sup> simulations
 - The trained MLIP model file `gpumodel.nequip.pt2` can be found from the [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) of this project
 
 The `IPI_INPUT`variable in the `job_base.sh` script must be set to

@@ -39,7 +39,7 @@ Performing the training on a HPC can be started by running the script
 ```bash
 sbatch run.job
 ```
-
+- Note that the job script `run.job` must always be configured according to the specific HPC cluster or environment in which it is intended to be used
 
 ### Output files
 

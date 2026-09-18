@@ -71,7 +71,7 @@ Copy the corresponding trajectory files to each bead directory:
 
 ```bash
 for i in $(seq 0 1 <P-1>); do 
-  cp ./Path_To_Simulation/PREFIX.pos_${i}.xyz ${i}/
+  cp ./path/to/simulation/dir/PREFIX.pos_${i}.xyz ${i}/
 done
 ```
 
@@ -113,9 +113,9 @@ for i in $(seq 0 1 <P-1>); do
 done
 ```
 
-**IMPORTANT**: Before running the job, ensure that the loop indices in the job script match your folder structure (number of beads and chunks), and that the chunk files are generated with the `sed` command either as in **step 2**, or in the `script_predict.job` script.
+**IMPORTANT**: Before running the job, ensure that the loop indices in the job script match your folder structure (number of beads and chunks), and that the chunk files are generated with the `split` command either as in **step 2**, or in the `script_predict.job` script.
 
-### 7. Monitor Prediction Progress
+### 4. Monitor Prediction Progress
 
 Check the prediction status:
 
@@ -123,19 +123,72 @@ Check the prediction status:
 grep 'Output saved to:' nmr-ml_matten-output_<JOB-ID>.txt
 ```
 
-### 8. Concatenate Results
+### 5. Output files and Concatenating the Results
 
-After all predictions are complete, concatenate the CSV files for each bead:
-
-```bash
-python3 concat_csvs.py
+After all predictions are complete, the output files from the predictions are produced as follows:
+```
+./0/
+    matten.log
+    nmr-ml_matten-output_<JOB-ID>.txt  # General output file
+    nmr-ml_matten-errors_<JOB-ID>.txt  # Errors output file
+    output_prediction0000.csv          # Predictions from the first chunk corresponding to file seg0000
+    output_prediction0001.csv          # Predictions from the second chunk corresponding to file seg0001
+    ...
+    output_prediction<M>.csv           # Predictions from the last chunk corresponding to file seg<M>
+...
+./<p-1>/
+    matten.log
+    nmr-ml_matten-output_<JOB-ID>.txt  # General output file
+    nmr-ml_matten-errors_<JOB-ID>.txt  # Errors output file
+    output_prediction0000.csv          # Predictions from the first chunk corresponding to file seg0000
+    output_prediction0001.csv          # Predictions from the second chunk corresponding to file seg0001
+    ...
+    output_prediction<M>.csv           # Predictions from the last chunk corresponding to file seg<M>
 ```
 
-This creates consolidated CSV files for further analysis, with one file per bead:
-- `./0/predicted_sigma_iso_beads_0.csv`
-- `./1/predicted_sigma_iso_beads_1.csv`
-- ...
-- `./31/predicted_sigma_iso_beads_31.csv`
+Concatenate the CSV files for each bead to produce a single `predictions.csv` file:
+
+```bash
+for i in $(seq 0 1 <P-1>); do 
+  cd ${i}
+  for i in {0000..<M>}; do
+     awk -v i="$i" 'NR>1 {print i$0}' output_prediction"$i".csv >> predictions.csv
+  done
+  cd ..
+done
+```
+- Note that in the place of `<P-1>` and `<M>` in the command, you have to use the number of beads, and the maximum chunk index, respectively, where the maximum chunk index depends on the length of the PIMD simulation
+- With no parallel predictions (only one prediction script per bead) the previous command can be included as the last command of the `script_predict.job` script
+
+This creates consolidated CSV files for further analysis, with one file per bead, each line containing a single NMR magnetic shielding tensor prediction as well as its isotropic value:
+- - `./0/predictions.csv`
+- - `./1/predictions.csv`
+- - ...
+- - `./<P-1>/predictions.csv`
+
+- You may now delete the chunked prediction files `output_prediction<ID>.csv`, as well as the chunked trajectory files `seg<ID>`
+
+### 6. Calculating the bead-averaged isotropic NMR magnetic shielding
+
+You can now extract the bead-specific isotropic NMR magnetic shielding values from the `predictions.csv` files with the command
+
+``bash
+for i in $(seq 0 1 <P-1>); do 
+  cd ${i}
+     grep '70,He' predictions.csv | awk -F',' '{print $7}' >> sig.txt
+  cd ..
+done
+```
+
+Now you can calculate the bead-averaged isotropic NMR magnetic shielding values by running the script
+
+``bash
+python3 calc_avg.py
+```
+- Note that you should change the variable called `beads` in the script to the correct value
+
+The script produces a file `sig_avg.txt` containing the bead-averaged isotropic NMR magnetic shielding values with one value per line
+
 
 ## Script Functions
 

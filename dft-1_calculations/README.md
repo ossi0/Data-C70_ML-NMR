@@ -106,6 +106,7 @@ ORCA `**TightSCF**` criteria used:
 1. Call the job script to start the calculation
 2. Extract and analyse the results
 
+- Note that the job script `mahti_orca.job` must always be configured according to the specific HPC cluster or environment in which it is intended to be used
 ---
 
 - **Computational Resource**: [CSC](https://csc.fi/) Supercomputer [MAHTI](https://www.mahti.csc.fi/public/)

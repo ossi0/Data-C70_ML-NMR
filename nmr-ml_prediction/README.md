@@ -172,7 +172,7 @@ This creates consolidated CSV files for further analysis, with one file per bead
 
 You can now extract the bead-specific isotropic NMR magnetic shielding values from the `predictions.csv` files with the command
 
-``bash
+```bash
 for i in $(seq 0 1 <P-1>); do 
   cd ${i}
      grep '70,He' predictions.csv | awk -F',' '{print $7}' >> sig.txt

@@ -13,7 +13,7 @@
 ---
 The DATA-2 dataset contains sample structures with reference NMR magnetic shielding tensors calculated at the [DFT-2 level](../dft-2_calculations).
 
-The dataset preparation for the training of MatTen NMR-ML architecture is comprehensively described in [this](https://github.com/ozakary/NMR-MatTen) GitHub repository, maintained by Ouail Zakary.
+The dataset preparation for the training of MatTen NMR-ML architecture, starting from finished `TURBOMOLE`NMR shielding calculations is comprehensively described in [this](https://github.com/ozakary/NMR-MatTen) GitHub repository, maintained by Ouail Zakary.
 
 
 ## Dataset Files

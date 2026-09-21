@@ -27,6 +27,6 @@ matten_dataset_output/
 └── config.txt                      # Configuration used
 ```
 
-- The files `dataset_train.json`, `dataset_val.json`, and `dataset_test.json` are the final dataset files used in the [training](../nmr-ml_model) of the MatTen NMR-ML model
+- The files `dataset_train.json`, `dataset_val.json`, and `dataset_test.json` are the final dataset files used in the [training](../matten-nmr-ml_model) of the MatTen NMR-ML model
 
 The `DATA-2_dataset` directory in the [Fairdata repository](https://doi.org/TBA) contains the dataset files for training the NMR-ML model used to predict NMR magnetic shielding tensor for He@C<sub>70</sub><sup>6-</sup> and He<sub>2</sub>@C<sub>70</sub><sup>6-</sup> structures.

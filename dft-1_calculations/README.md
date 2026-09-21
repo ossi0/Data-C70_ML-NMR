@@ -20,9 +20,9 @@ This project contains computational conditions for He@C<sub>70</sub><sup>6-</sup
 
 The reference DFT values are calculated for all structures in the reference dataset at the DFT-1 theory level with ORCA as described in the paper.
 
-Here we provide one example calculation folder `cluster_<ID>`. The input files for this example DFT calculation data files can be found in the corresponding subdirectories in this GitHub page.
+Here we provide one example calculation folder `cluster_<ID>` including the required input files, for both He@C<sub>70</sub><sup>6-</sup> and He<sub>2</sub>@C<sub>70</sub><sup>6-</sup> structures.
 
-The output files and the calculation results of the example calculation provided here can be found in this [Fairdata repository](https://doi.org/TBA). The reference energy and force values from all of the ORCA calculations are available in the data set files in the [Fairdata repository](https://doi.org/TBA).
+The output files and the calculation results of the example calculations provided here can be found in this [Fairdata repository](https://doi.org/TBA). The reference energy and force values from all of the ORCA calculations are also available in the data set files in the [Fairdata repository](https://doi.org/TBA).
 
 Calculation directory structure example:
 ```

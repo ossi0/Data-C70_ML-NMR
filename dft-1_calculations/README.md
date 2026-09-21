@@ -12,7 +12,7 @@
 This repository contains the calculation conditions used in the DFT reference data computations for the MLIP machine learning interatomic potential of He@C<sub>70</sub><sup>6-</sup> and He<sub>2</sub>@C<sub>70</sub><sup>6-</sup> endohedral fullerene systems described in the paper “***Machine Learning For NMR Observables Sensitive to Nuclear Quantum Effects***”.
 
 
-[![DOI](https://img.shields.io/badge/TBA%2FTBA-yellow.svg)](https://doi.org/TBA)
+[![DOI](https://img.shields.io/badge/DOI%2FTBA-yellow.svg)](https://doi.org/TBA)
 
 ## Overview of the Data
 

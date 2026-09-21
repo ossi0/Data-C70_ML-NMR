@@ -16,7 +16,7 @@
 
 ---
 
-This is the supporting code for the manuscript “***Machine Learning For NMR Observables Sensitive to Nuclear Quantum Effects***”. [DOI: https://doi.org/10.1021/acs.jpca.6c00238]
+This is the supporting code for the manuscript “***Machine Learning For NMR Observables Sensitive to Nuclear Quantum Effects***”. [DOI: https://doi.org/TBA]
 
 The repository comprises the following sections:
 
@@ -36,7 +36,7 @@ The repository comprises the following sections:
 ## Citations
 If you use this data, please cite the following:
 
-### Paper [![DOI](https://img.shields.io/badge/DOI-10.1021%2Facs.jpca.6c00238-yellow.svg)](https://doi.org/10.1021/acs.jpca.6c00238)
+### Paper [![DOI](https://img.shields.io/badge/DOI-10.1021%2Facs.jpca.6c00238-yellow.svg)](https://doi.org/TBA)
 
 ```bibtex
 @article{laurila_2026_c70_ml_nmr,
@@ -52,7 +52,7 @@ If you use this data, please cite the following:
 }
 ```
 
-### Dataset [![DOI](https://img.shields.io/badge/DOI-10.23729%2Ffd--c64c043e--473e--371d--9586--8fd3d04e2fb0-blueviolet.svg)](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0)
+### Dataset [![DOI](https://img.shields.io/badge/DOI-10.23729%2Ffd--c64c043e--473e--371d--9586--8fd3d04e2fb0-blueviolet.svg)](https://doi.org/TBA)
 
 ```bibtex
 @dataset{laurila_2025_data_c70_ml_nmr,
@@ -65,7 +65,7 @@ If you use this data, please cite the following:
 }
 ```
 
-### Code [![DOI](https://img.shields.io/badge/GitHub-ozakary%2Fdata--C60__ML-blue.svg)](https://github.com/ozakary/data-C60_ML)
+### Code [![DOI](https://img.shields.io/badge/GitHub-ossi0%2FData--C70__ML--NMR-blue.svg)](https://github.com/ossi0/Data-C70_ML-NMR)
 ```bibtex
 @misc{laurila_2026_github_c70_ml_nmr,
   author = {Laurila, Ossi, and Zakary, Ouail and Lantto, Perttu},

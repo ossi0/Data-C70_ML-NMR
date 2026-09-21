@@ -12,7 +12,7 @@
 
 ## Producing the DATA-1 reference dataset structures of He@C<sub>70</sub> and He<sub>2</sub>@C<sub>70</sub>
 
-This directory contains the necessary input files to reproduce the semi-empirical MD data with DFTB+ software. The configurations of the output MD trajectory are used as reference data in the training of NequIP MLIP model. The output files, including the snapshots taken from the semi-empirical MD simulation can be found in the [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) of this project.
+This directory contains the necessary input files to reproduce the semi-empirical MD data with DFTB+ software. The configurations of the output MD trajectory are used as reference data in the training of NequIP MLIP model. The output files, including the snapshots taken from the semi-empirical MD simulation can be found in the [Fairdata repository](https://doi.org/TBA) of this project.
 
 ### DFTB+ input files
 

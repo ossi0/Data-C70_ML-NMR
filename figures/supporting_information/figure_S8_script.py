@@ -76,7 +76,7 @@ def plot_distribution(
 
 # Function to plot the distribution without legend
 def plot_distribution_nolegend(
-    ax, data, labels, bins, kde_class, kde_pimd, legend_loc, legend_labels=None
+    ax, data, labels, bins, kde_class, kde_pimd
 ):
     """Plot the distributions and the PIMD-minus-classical KDE difference."""
     legend_labels = labels if legend_labels is None else legend_labels
@@ -158,8 +158,6 @@ plot_distribution_nolegend(
     bins_1,
     kde_class_1,
     kde_pimd_1,
-    "upper right",
-    legend_labels=SIMULATION_LABELS,
 )
 
 
@@ -203,7 +201,6 @@ plot_distribution_nolegend(
     bins_3,
     kde_class_3,
     kde_pimd_3,
-    "upper left",
 )
 
 # ---------------------------------------------------------------------------
@@ -224,7 +221,6 @@ plot_distribution_nolegend(
     bins_4,
     kde_class_4_mono,
     kde_pimd_4_mono,
-    "upper right",
 )
 
 

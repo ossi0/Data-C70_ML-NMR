@@ -36,7 +36,7 @@ The repository comprises the following sections:
 ## Citations
 If you use this data, please cite the following:
 
-### Paper [![DOI](https://img.shields.io/badge/DOI-10.1021%2Facs.jpca.6c00238-yellow.svg)](https://doi.org/TBA)
+### Paper [![DOI](https://img.shields.io/badge/TBA%2FTBA-yellow.svg)](https://doi.org/TBA)
 
 ```bibtex
 @article{laurila_2026_c70_ml_nmr,

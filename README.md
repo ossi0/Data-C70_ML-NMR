@@ -52,7 +52,7 @@ If you use this data, please cite the following:
 }
 ```
 
-### Dataset [![DOI](https://img.shields.io/badge/DOI-10.23729%2Ffd--c64c043e--473e--371d--9586--8fd3d04e2fb0-blueviolet.svg)](https://doi.org/TBA)
+### Dataset [![DOI](https://img.shields.io/badge/TBA%2FTBA-blueviolet.svg)](https://doi.org/TBA)
 
 ```bibtex
 @dataset{laurila_2025_data_c70_ml_nmr,

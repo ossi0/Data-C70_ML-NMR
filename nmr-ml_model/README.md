@@ -64,5 +64,5 @@ training_run/
 Compilation is not required, and the trained model file `best.ckpt` is ready to be used in the [predictions](../nmr-ml_prediction).
 
 
-- The trained MatTen model file can be found in the external [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0)
-- The dataset files `dataset_train.json`, `dataset_val.json`, and `dataset_test.json` can also be found in the external [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0).
+- The trained MatTen model file can be found in the external [Fairdata repository](https://doi.org/TBA)
+- The dataset files `dataset_train.json`, `dataset_val.json`, and `dataset_test.json` can also be found in the external [Fairdata repository](https://doi.org/TBA).

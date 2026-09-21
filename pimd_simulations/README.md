@@ -11,7 +11,7 @@
 ---
 This sub-repository contains example input files and workflow for the PIMD simulations of He@C<sub>70</sub><sup>6-</sup> and He<sub>2</sub>@C<sub>70</sub><sup>6-</sup> with [i-PI](https://github.com/i-pi/i-pi) code. 
 
-Example PIMD simulation runs with the resulting output files for the He@C<sub>70</sub><sup>6-</sup> and He<sub>2</sub>@C<sub>70</sub><sup>6-</sup> structures are provided in the [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) of this project. Unfortunately it is not possible to provide all of the simulation output data in the IDA repository, due to the massive amount of PIMD simulation data.
+Example PIMD simulation runs with the resulting output files for the He@C<sub>70</sub><sup>6-</sup> and He<sub>2</sub>@C<sub>70</sub><sup>6-</sup> structures are provided in the [Fairdata repository](https://doi.org/TBA) of this project. Unfortunately it is not possible to provide all of the simulation output data in the IDA repository, due to the massive amount of PIMD simulation data.
 
 ## Directory Structure
 
@@ -39,7 +39,7 @@ The structure of each directory is:
     PREFIX.chk              # Checkpoint file for the simulation settings and protocol to continue the simulation
 ```
 
-- The trained MLIP model file `gpumodel.nequip.pt2` can be found from the [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) of this project
+- The trained MLIP model file `gpumodel.nequip.pt2` can be found from the [Fairdata repository](https://doi.org/TBA) of this project
 
 The `IPI_INPUT`variable in the `job_base.sh` script must be set to
   **input.xml**

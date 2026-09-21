@@ -1,14 +1,12 @@
 # Machine Learning-Assisted Path Integral Molecular Dynamics (MLPIMD) Simulations
 
-📄 Authors: **Ouail Zakary** and **Ossi Laurila**
+📄 Author: **Ossi Laurila**
 
 ---
 
-👤 Corresponding Author: **Ouail Zakary**  
-- 📧 Email: [Ouail.Zakary@oulu.fi](mailto:Ouail.Zakary@oulu.fi)  
-- 🔗 ORCID: [0000-0002-7793-3306](https://orcid.org/0000-0002-7793-3306)  
-- 🌐 Website: [Personal Webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
-- 📁 Portfolio: [Academic Portfolio](https://ozakary.github.io/)
+👤 Corresponding Author: **Ossi Laurila**  
+- 📧 Email: [Ossi.Laurila@oulu.fi](mailto:Ossi.Laurila@oulu.fi)  
+- 🔗 ORCID: [0009-0002-7642-1269](https://orcid.org/0009-0002-7642-1269)  
 
 ---
 This sub-repository contains example input files and workflow for the PIMD simulations of He@C<sub>70</sub><sup>6-</sup> and He<sub>2</sub>@C<sub>70</sub><sup>6-</sup> with [i-PI](https://github.com/i-pi/i-pi) code. 

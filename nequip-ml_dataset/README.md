@@ -13,7 +13,7 @@ This document describes the dataset preparation for the training of NequIP MLIP 
 
 ## Directory Contents
 
-The `DFT-1_dataset` directory in the [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) contains the dataset necessary for training machine learning models to predict energy and forces from molecular structures. The dataset contains He@C<sub>70</sub><sup>6-</sup> and He<sub>2</sub>@C<sub>70</sub><sup>6-</sup> endohedral fullerene structures obtained from the [semi-empirical MD simulations](../dftb-md), with their corresponding energy and force components acting on each atom calculated using `ORCA`.
+The `DFT-1_dataset` directory in the [Fairdata repository](https://doi.org/TBA) contains the dataset necessary for training machine learning models to predict energy and forces from molecular structures. The dataset contains He@C<sub>70</sub><sup>6-</sup> and He<sub>2</sub>@C<sub>70</sub><sup>6-</sup> endohedral fullerene structures obtained from the [semi-empirical MD simulations](../dftb-md), with their corresponding energy and force components acting on each atom calculated using `ORCA`.
 
 ## Dataset Files
 
@@ -99,7 +99,7 @@ python3 create_db.py
 ## Notes
 
 - The dataset is suitable for training NequIP or similar neural network architectures for predicting molecular energy and forces
-- The dataset files are available in the [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0).
+- The dataset files are available in the [Fairdata repository](https://doi.org/TBA).
 
 ---
 

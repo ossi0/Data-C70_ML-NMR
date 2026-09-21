@@ -79,7 +79,6 @@ def plot_distribution_nolegend(
     ax, data, labels, bins, kde_class, kde_pimd
 ):
     """Plot the distributions and the PIMD-minus-classical KDE difference."""
-    legend_labels = labels if legend_labels is None else legend_labels
     sns.kdeplot(
         data=make_distribution_dataframe(data, labels),
         x="r",

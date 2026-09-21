@@ -9,12 +9,12 @@ from matplotlib.lines import Line2D
 SIGMA_HE = 59.874
 
 # Load th data
-C70_di_an = np.loadtxt('data/sigma_predicted_dimer/class_3he/sig_di_avg.txt')
-C70_mono_an = np.loadtxt('data/sigma_predicted_monomer/class_3he/sig_mono_avg.txt')
-C70_di_an_pimd = np.loadtxt('data/sigma_predicted_dimer/3he/sig_di_avg.txt')
-C70_mono_an_pimd = np.loadtxt('data/sigma_predicted_monomer/3he/sig_mono_avg.txt')
-C70_di_an_pileg_1b = np.loadtxt('data/sigma_predicted_dimer/class_pileg/sig_di_avg.txt')
-C70_mono_an_pileg_1b = np.loadtxt('data/sigma_predicted_monomer/class_pileg/sig_mono_avg.txt')
+C70_di_an = np.loadtxt('data/sigma_predicted_dimer/1b_gle/sig_di_avg.txt')
+C70_mono_an = np.loadtxt('data/sigma_predicted_monomer/1b_gle/sig_mono_avg.txt')
+C70_di_an_pimd = np.loadtxt('data/sigma_predicted_dimer/4b_piglet/sig_di_avg.txt')
+C70_mono_an_pimd = np.loadtxt('data/sigma_predicted_monomer/4b_piglet/sig_mono_avg.txt')
+C70_di_an_pileg_1b = np.loadtxt('data/sigma_predicted_dimer/1b_pileg/sig_di_avg.txt')
+C70_mono_an_pileg_1b = np.loadtxt('data/sigma_predicted_monomer/1b_pileg/sig_mono_avg.txt')
 
 # Calculate statistics
 mono_mean_an = np.round(np.mean(C70_mono_an_pimd), 3)

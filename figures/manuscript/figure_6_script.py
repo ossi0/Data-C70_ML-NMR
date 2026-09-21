@@ -5,23 +5,23 @@ import matplotlib.pyplot as plt
 def load_data():
     paths = {
         "class": (
-            "data/sigma_predicted_dimer/class_3he/sig_di_avg.txt",
-            "data/sigma_predicted_monomer/class_3he/sig_mono_avg.txt",
+            "data/sigma_predicted_dimer/1b_gle/sig_di_avg.txt",
+            "data/sigma_predicted_monomer/1b_gle/sig_mono_avg.txt",
             800000,
         ),
         "pileg": (
-            "data/sigma_predicted_dimer/class_pileg/sig_di_avg.txt",
-            "data/sigma_predicted_monomer/class_pileg/sig_mono_avg.txt",
+            "data/sigma_predicted_dimer/1b_pileg/sig_di_avg.txt",
+            "data/sigma_predicted_monomer/1b_pileg/sig_mono_avg.txt",
             800000,
         ),
         "pimd": (
-            "data/sigma_predicted_dimer/3he/sig_di_avg.txt",
-            "data/sigma_predicted_monomer/3he/sig_mono_avg.txt",
+            "data/sigma_predicted_dimer/4b_piglet/sig_di_avg.txt",
+            "data/sigma_predicted_monomer/4b_piglet/sig_mono_avg.txt",
             800000,
         ),
         "8b": (
-            "data/sigma_predicted_dimer/8bead/sig_di_avg.txt",
-            "data/sigma_predicted_monomer/8bead/sig_mono_avg.txt",
+            "data/sigma_predicted_dimer/8b_piglet/sig_di_avg.txt",
+            "data/sigma_predicted_monomer/8b_piglet/sig_mono_avg.txt",
             250000,
         ),
     }

@@ -22,7 +22,7 @@ The reference DFT values are calculated for all structures in the reference data
 
 Here we provide one example calculation folder `cluster_<ID>`. The input files for this example DFT calculation data files can be found in the corresponding subdirectories in this GitHub page.
 
-The output files and the calculation results of the example calculation provided here can be found in this [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0). The reference energy and force values from all of the ORCA calculations are available in the data set files in the [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0).
+The output files and the calculation results of the example calculation provided here can be found in this [Fairdata repository](https://doi.org/TBA). The reference energy and force values from all of the ORCA calculations are available in the data set files in the [Fairdata repository](https://doi.org/TBA).
 
 Calculation directory structure example:
 ```

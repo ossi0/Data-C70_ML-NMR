@@ -57,5 +57,5 @@ ax4.set_xlabel('Number of convolution layers', fontsize=18)
 ax4.legend(loc="upper right", fontsize=16)
 
 # Save the figure
-plt.savefig('matten_param_testing_an.png', dpi=300)
+plt.savefig('figure_S4.png', dpi=300)
 plt.show()

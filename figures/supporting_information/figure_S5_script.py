@@ -8,9 +8,9 @@ plt.rcParams['axes.formatter.use_locale'] = False
 plt.rcParams['axes.formatter.limits'] = (-10, 10)  # effectively disables sci notation
 
 # Load the data
-C70_an_train = np.loadtxt('./data/matten_training_data/C70_anion_train_loss.csv', delimiter=",", dtype=float, skiprows=1)
-C70_an_val = np.loadtxt('./data/matten_training_data/C70_anion_val_loss.csv', delimiter=",", dtype=float, skiprows=1)
-C70_an_val_mae = np.loadtxt('./data/matten_training_data/C70_anion_val_mae.csv', delimiter=",", dtype=float, skiprows=1)
+C70_an_train = np.loadtxt('../../data/matten_training_data/C70_anion_train_loss.csv', delimiter=",", dtype=float, skiprows=1)
+C70_an_val = np.loadtxt('../../data/matten_training_data/C70_anion_val_loss.csv', delimiter=",", dtype=float, skiprows=1)
+C70_an_val_mae = np.loadtxt('../../data/matten_training_data/C70_anion_val_mae.csv', delimiter=",", dtype=float, skiprows=1)
 
 
 C70_an_sigma_train = C70_an_train[:, 1]
@@ -40,5 +40,5 @@ ax1.yaxis.set_major_formatter(StrMethodFormatter('{x:g}'))
 ax1.grid(True, which="both", axis="both", ls="-", alpha=0.4)
 
 # Save the figure
-plt.savefig('matten_anion.png', dpi=300)
+plt.savefig('figure_S5.png', dpi=300)
 plt.show()

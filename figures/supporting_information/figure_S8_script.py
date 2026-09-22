@@ -118,9 +118,9 @@ AXIS_1_DATA_LABELS = [
 # ---------------------------------------------------------------------------
 # AXIS 1 — He-He RDF
 # ---------------------------------------------------------------------------
-he_he_class_pileg = np.loadtxt('./data/position_distributions/dimer/1b_pileg/he_he_distances.txt')
-he_he_class_gle = np.loadtxt('./data/position_distributions/dimer/1b_gle/he_he_distances.txt')
-he_he_pimd = np.loadtxt('./data/position_distributions/dimer/4b_piglet/he_he_distances.txt')
+he_he_class_pileg = np.loadtxt('../../data/position_distributions/dimer/1b_pileg/he_he_distances.txt')
+he_he_class_gle = np.loadtxt('../../data/position_distributions/dimer/1b_gle/he_he_distances.txt')
+he_he_pimd = np.loadtxt('../../data/position_distributions/dimer/4b_piglet/he_he_distances.txt')
 
 # Print some average He-He distances
 print(
@@ -163,9 +163,9 @@ plot_distribution_nolegend(
 # ---------------------------------------------------------------------------
 # AXIS 2 — C-He RDF
 # ---------------------------------------------------------------------------
-c_he_class_pileg = np.loadtxt('./data/position_distributions/dimer/1b_pileg/c_he_distances.txt')
-c_he_class_gle = np.loadtxt('./data/position_distributions/dimer/1b_gle/c_he_distances.txt')
-c_he_pimd = np.loadtxt('./data/position_distributions/dimer/4b_piglet/c_he_distances.txt')
+c_he_class_pileg = np.loadtxt('../../data/position_distributions/dimer/1b_pileg/c_he_distances.txt')
+c_he_class_gle = np.loadtxt('../../data/position_distributions/dimer/1b_gle/c_he_distances.txt')
+c_he_pimd = np.loadtxt('../../data/position_distributions/dimer/4b_piglet/c_he_distances.txt')
 
 bins_2 = np.linspace(2, 6, 1000)
 kde_class_2 = gaussian_kde(c_he_class_pileg)
@@ -185,9 +185,9 @@ plot_distribution(
 # ---------------------------------------------------------------------------
 # AXIS 3 — He distance from cage COM
 # ---------------------------------------------------------------------------
-he_com_class_pileg = np.loadtxt('./data/position_distributions/dimer/1b_pileg/he_COM_distances.txt')
-he_com_class_gle = np.loadtxt('./data/position_distributions/dimer/1b_gle/he_COM_distances.txt')
-he_com_pimd = np.loadtxt('./data/position_distributions/dimer/4b_piglet/he_COM_distances.txt')
+he_com_class_pileg = np.loadtxt('../../data/position_distributions/dimer/1b_pileg/he_COM_distances.txt')
+he_com_class_gle = np.loadtxt('../../data/position_distributions/dimer/1b_gle/he_COM_distances.txt')
+he_com_pimd = np.loadtxt('../../data/position_distributions/dimer/4b_piglet/he_COM_distances.txt')
 
 bins_3 = np.linspace(0, 2, 500)
 kde_class_3 = gaussian_kde(he_com_class_pileg)
@@ -205,9 +205,9 @@ plot_distribution_nolegend(
 # ---------------------------------------------------------------------------
 # AXIS 4 — Monomer He distance from cage COM
 # ---------------------------------------------------------------------------
-he_com_class_pileg_mono = np.loadtxt('./data/position_distributions/monomer/1b_pileg/he_COM_distances.txt')
-he_com_class_gle_mono = np.loadtxt('./data/position_distributions/monomer/1b_gle/he_COM_distances.txt')
-he_com_pimd_mono = np.loadtxt('./data/position_distributions/monomer/4b_piglet/he_COM_distances.txt')
+he_com_class_pileg_mono = np.loadtxt('../../data/position_distributions/monomer/1b_pileg/he_COM_distances.txt')
+he_com_class_gle_mono = np.loadtxt('../../data/position_distributions/monomer/1b_gle/he_COM_distances.txt')
+he_com_pimd_mono = np.loadtxt('../../data/position_distributions/monomer/4b_piglet/he_COM_distances.txt')
 
 bins_4 = np.linspace(0, 2, 500)
 kde_class_4_mono = gaussian_kde(he_com_class_pileg_mono)
@@ -255,5 +255,5 @@ ax3.tick_params(axis='y', labelsize=16)
 ax4.tick_params(axis='x', labelsize=16)
 ax4.tick_params(axis='y', labelsize=16)
 
-plt.savefig("positions_dist.png", dpi=300)
+plt.savefig("figure_S8.png", dpi=300)
 plt.show()

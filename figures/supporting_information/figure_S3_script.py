@@ -7,8 +7,8 @@ plt.rcParams['axes.formatter.use_locale'] = False
 plt.rcParams['axes.formatter.limits'] = (-10, 10)  # effectively disables sci notation
 
 # Load the data
-C70_an_train = np.loadtxt('./data/nequip_training_data/C70_an_train.csv', delimiter=",", dtype=float, skiprows=1)
-C70_an_val = np.loadtxt('./data/nequip_training_data/C70_an_val.csv', delimiter=",", dtype=float, skiprows=1)
+C70_an_train = np.loadtxt('../../data/nequip_training_data/C70_an_train.csv', delimiter=",", dtype=float, skiprows=1)
+C70_an_val = np.loadtxt('../../data/nequip_training_data/C70_an_val.csv', delimiter=",", dtype=float, skiprows=1)
 
 
 C70_an_energy_train = C70_an_train[:, 2]
@@ -52,5 +52,5 @@ ax2.legend(loc="upper right", fontsize=16)
 ax2.grid(True, which="both", axis="both", ls="-", alpha=0.4)
 
 # Save the figure
-plt.savefig('train_nequip_an.png', dpi=300)
+plt.savefig('figure_S3.png', dpi=300)
 plt.show()

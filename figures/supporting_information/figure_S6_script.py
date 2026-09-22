@@ -7,22 +7,22 @@ import scipy
 import sklearn
 
 #Predicted TRAIN SET
-train_off1 = np.loadtxt('./data/dft/sigma/he_shielding_pred_DFT2.txt', usecols=1)
-train_off2 = np.loadtxt('./data/dft/sigma/he_shielding_pred_DFT2.txt', usecols=2)
-train_off3 = np.loadtxt('./data/dft/sigma/he_shielding_pred_DFT2.txt', usecols=5)
+train_off1 = np.loadtxt('../../data/dft/sigma/he_shielding_pred_DFT2.txt', usecols=1)
+train_off2 = np.loadtxt('../../data/dft/sigma/he_shielding_pred_DFT2.txt', usecols=2)
+train_off3 = np.loadtxt('../../data/dft/sigma/he_shielding_pred_DFT2.txt', usecols=5)
 
-train_diag1 = np.loadtxt('./data/dft/sigma/he_shielding_pred_DFT2.txt', usecols=0)
-train_diag2 = np.loadtxt('./data/dft/sigma/he_shielding_pred_DFT2.txt', usecols=4)
-train_diag3 = np.loadtxt('./data/dft/sigma/he_shielding_pred_DFT2.txt', usecols=8)
+train_diag1 = np.loadtxt('../../data/dft/sigma/he_shielding_pred_DFT2.txt', usecols=0)
+train_diag2 = np.loadtxt('../../data/dft/sigma/he_shielding_pred_DFT2.txt', usecols=4)
+train_diag3 = np.loadtxt('../../data/dft/sigma/he_shielding_pred_DFT2.txt', usecols=8)
 
 #True Values
-true_off1 = np.loadtxt('./data/dft/sigma/he_shielding_true_DFT2.txt', usecols=1)
-true_off2 = np.loadtxt('./data/dft/sigma/he_shielding_true_DFT2.txt', usecols=2)
-true_off3 = np.loadtxt('./data/dft/sigma/he_shielding_true_DFT2.txt', usecols=5)
+true_off1 = np.loadtxt('../../data/dft/sigma/he_shielding_true_DFT2.txt', usecols=1)
+true_off2 = np.loadtxt('../../data/dft/sigma/he_shielding_true_DFT2.txt', usecols=2)
+true_off3 = np.loadtxt('../../data/dft/sigma/he_shielding_true_DFT2.txt', usecols=5)
 
-true_diag1 = np.loadtxt('./data/dft/sigma/he_shielding_true_DFT2.txt', usecols=0)
-true_diag2 = np.loadtxt('./data/dft/sigma/he_shielding_true_DFT2.txt', usecols=4)
-true_diag3 = np.loadtxt('./data/dft/sigma/he_shielding_true_DFT2.txt', usecols=8)
+true_diag1 = np.loadtxt('../../data/dft/sigma/he_shielding_true_DFT2.txt', usecols=0)
+true_diag2 = np.loadtxt('../../data/dft/sigma/he_shielding_true_DFT2.txt', usecols=4)
+true_diag3 = np.loadtxt('../../data/dft/sigma/he_shielding_true_DFT2.txt', usecols=8)
 
 #Create data frames
 diag1_fr = pd.DataFrame({"Sigma_true": true_diag1, "Sigma_pred": train_diag1, "index":"sigma_11"})
@@ -217,7 +217,7 @@ ax_joint5.tick_params(axis='x', labelsize=16)
 ax_joint5.tick_params(axis='y', labelsize=16)
 
 # Save the figure
-plt.savefig('C70_He_an_corr.png', dpi=300)
+plt.savefig('figure_S6.png', dpi=300)
 plt.show()
 
 

@@ -58,5 +58,5 @@ ax4.set_xlabel('Number of interaction blocks', fontsize=18)
 ax4.legend(loc="upper right", fontsize=16)
 
 # Save the figure
-plt.savefig('nequip_param_testing_an.png', dpi=300)
+plt.savefig('figure_S1.png', dpi=300)
 plt.show()

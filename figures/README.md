@@ -56,7 +56,7 @@ To reproduce the figures and analyze the data, you will need the following:
 - For each figure, if a script or dataset is not applicable, it is indicated as `N/A`.
 - Organized figures into two categories: Manuscript and Supporting Information for clarity.
 
-Feel free to browse through the figures, and check the corresponding scripts and datasets. Ensure all dependencies are installed, and that the corresponding [data](https://doi.org/TBA) is downloaded before attempting to run the scripts for reproducibility.
+Feel free to browse through the figures, and check the corresponding scripts and datasets. Ensure all dependencies are installed, and that the corresponding folder named `data`, found from the [Fairdata repository](https://doi.org/TBA), is downloaded before attempting to run the scripts for reproducibility.
 
 ---
 

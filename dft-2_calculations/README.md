@@ -27,7 +27,7 @@ The reference DFT values are calculated for all structures in the reference data
 
 Here we provide one example calculation folder `cluster_<ID>`. The input files for this example DFT calculation data files can be found in the corresponding subdirectories in this GitHub page.
 
-The output files and the calculation results of the example calculation provided here can be found in this [Fairdata repository](https://doi.org/TBA). The reference TURBOMOLE NMR isotropic magnetic shielding calculations for all structures of the DATA-2 dataset are available in the [Fairdata repository](https://doi.org/TBA).
+The output files and the calculation results of the example calculation provided here can be found in this [Fairdata repository](https://doi.org/TBA). The reference TURBOMOLE NMR isotropic magnetic shielding calculations for all structures of the DATA-2 dataset in compressed format are available in the [Fairdata repository](https://doi.org/TBA).
 
 Calculation directory structure example:
 ```

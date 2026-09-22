@@ -21,4 +21,4 @@ module load gcc/13.2.0
 module load cuda/12.6.0
 module load pytorch/2.6
 source /scratch/plantto/olaurila/allegro/allegro-venv/bin/activate
-nequip-compile ./best.ckpt ./model_gpu.nequip.pt2 --device cuda --mode aotinductor --target ase
+nequip-compile ./best.ckpt ./gpumodel.nequip.pt2 --device cuda --mode aotinductor --target ase

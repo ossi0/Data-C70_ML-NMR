@@ -17,8 +17,8 @@ plt.rcParams['axes.formatter.limits'] = (-10, 10)  # effectively disables sci no
 # Load the energy data MAYBE CHANGE THIS TO READ THE DATA FROM .db AS IN THE CASE OF FORCES
 energies = []
 
-C70_He_di = np.loadtxt('./data/dft/dimer/C70_di_an_energy.txt')
-C70_He_mono = np.loadtxt('./data/dft/monomer/C70_mono_an_energy.txt')
+C70_He_di = np.loadtxt('../../data/dft/dimer/C70_di_an_energy.txt')
+C70_He_mono = np.loadtxt('../../data/dft/monomer/C70_mono_an_energy.txt')
 
 # Convert energies from Hartree to eV
 C70_He_di = [C70_He_di[i]*27.2114079527 for i in range(len(C70_He_di))]
@@ -52,7 +52,7 @@ C70_He_mono_forces_z = []
 
 #READ DATABASE
 
-database = ase.db.core.connect('./data/dft/molecules_train.db')
+database = ase.db.core.connect('../../data/dft/molecules_train.db')
 for i in range(1, len(database)):
     row = database.get(id=i)
     if (row.get('natoms') == 71):
@@ -154,5 +154,5 @@ plt.setp(ax4.get_legend().get_texts(), fontsize='18') # for legend text
 plt.setp(ax4.get_legend().get_title(), fontsize='18') # for legend title
 
 # Save the figure
-plt.savefig('C70_e_an.png', dpi=300)
+plt.savefig('figure_2.png', dpi=300)
 plt.show()

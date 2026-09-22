@@ -1,0 +1,96 @@
+$dsenex
+$lastdiag
+$rij
+$esenex
+$rundimensions
+   natoms=71
+   nbf(CAO)=2558
+   nbf(AO)=2203
+$scfdump
+$ricore     3000
+$drvopt
+cartesian  on
+   basis      off
+   global     off
+   hessian    on
+   dipole     on
+   nuclear polarizability
+$forceupdate
+ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$dft
+    functional   b3-lyp
+    gridsize   6
+    diffuse   5
+$subtitle
+SP,DFT+Disp/RI,charge 0,c1,pcSseg-3,
+$scfiterlimit    100
+$coord    file=coord
+$jbas    file=auxbasis
+$thime    5
+$disp3    bj
+$charge from ridft
+         -6.000 (not to be modified here)
+$forceinit on
+   diag=default
+$scforbitalshift    automatic=.1
+$statistics    off
+$senex
+$esenex
+$ecp    file=basis
+$interconversion    off
+   qconv=1.d-7
+   maxiter=25
+$optimize
+ internal   off
+ redundant  off
+ cartesian  on
+ global     off
+ basis      off
+$symmetry c1
+$tmole
+$traloop    12
+$basis    file=basis
+$scfmo   file=mos
+$title    job_SP_55
+$atoms
+c  1-70                                                                        \
+   basis =c def2-TZVP                                                          \
+   jbas  =c universal
+he 71                                                                          \
+   basis =he pcSseg-3                                                          \
+   jbas  =he universal
+$marij
+$coordinateupdate
+dqmax=0.3
+   interpolate  on
+   statistics    5
+$scfdamp     start=0.700 step=0.050 min=0.100
+$operating system    unix
+$thize    0.10000000E+10
+$scfintunit
+unit=30 size=1 file=twoint
+$forceapprox    file=forceapprox
+$scfdiis
+$xctype hybrid-GGA X= 0.20000 (not to be modified here)
+$last SCF energy change = -2668.5952
+$maxcor   1500 MiB  per_core
+$nmr dft shielding constants
+    file=shieldings
+$nucsel "he"
+$scfconv   8
+$optinfo       file=optinfo
+$hessapprox   file=hessapprox
+$user-defined bonds    file=coord
+$energy    file=energy
+$grad    file=gradient
+$closed shells
+ a       1-214                                  ( 2 )
+$last step     mpshift
+$orbital_max_rnorm 0.45781060296237E-05
+$subenergy  Etot         E1                  Ej                Ex                 Ec                 En                 Disp
+-2668.595226856    -25188.50239650     12133.92703136    -291.1042253516    -17.63151327753     10695.10404656    -.3703766734571
+$dipole from ridft
+  x     0.17557549047501    y     0.26998187152638    z     0.06983515531784    a.u.
+   | dipole | =    0.8376030538  debye
+$end

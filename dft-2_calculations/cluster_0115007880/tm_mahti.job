@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH --job-name=C70NMR
+#SBATCH --partition=medium
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=128 # MPI tasks per node
+#SBATCH --account=plantto   # insert here the project to be billed
+#SBATCH --time=03:00:00       # time as `hh:mm:ss`
+#SBATCH -e jobfile.err%J
+#SBATCH -o jobfile.out%J
+
+export PARA_ARCH=SMP          # use SMP
+module load turbomole/7.9
+export SLURM_CPU_BIND=none
+# This setting of TURBOTMPDIR assumes that the job is 
+# submitted from a directory below /scratch/<project>
+export TURBOTMPDIR=`echo $PWD |cut -d'/' -f1-3`"/TM_TMPDIR/"$SLURM_JOB_ID
+mkdir -p $TURBOTMPDIR
+export PARNODES=$SLURM_NTASKS  # for MPI
+export PATH=$TURBODIR/bin/`$TURBODIR/scripts/sysname`:$PATH
+
+
+ridft > ridft.out
+rdgrad > rdgrad.out
+mpshift > mpshift.out

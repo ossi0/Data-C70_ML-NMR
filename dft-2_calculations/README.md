@@ -107,7 +107,7 @@ To start the calculation, all the necessary TURBOMOLE input files should be incl
   - [basis](./cluster_0115007880/basis): Basis set definition
   - [control](./cluster_0115007880/control): Main input control file
   - [coord](./cluster_0115007880/coord): Cartesian coordinates file
-  - [coord_ID.xyz](./cluster_0115007880/coord.xyz): Coordinate file in xyz format
+  - [coord_ID.xyz](./cluster_0115007880/coord_0115007880.xyz): Coordinate file in xyz format
   - [auxbasis](./cluster_0115007880/auxbasis): Auxiliary basis set for RI approximation
   - mos: Turbomole input file containing the molecular orbitals.
 - **Computational Resources**: [CSC](https://csc.fi/) Supercomputers [PUHTI](https://www.puhti.csc.fi/public/) and [MAHTI](https://www.mahti.csc.fi/public/)

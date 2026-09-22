@@ -1,0 +1,42 @@
+#!/bin/bash
+#SBATCH -J AC70He_4
+#SBATCH --partition=medium
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=128 # MPI tasks per node
+#SBATCH --account=plantto   # insert here the project to be billed
+#SBATCH --time=02:00:00       # time as `hh:mm:ss`
+#SBATCH -e jobfile.err%J
+#SBATCH -o jobfile.out%J
+
+export PARA_ARCH=SMP          # use SMP
+module load turbomole/7.9
+export SLURM_CPU_BIND=none
+# This setting of TURBOTMPDIR assumes that the job is 
+# submitted from a directory below /scratch/<project>
+export TURBOTMPDIR=`echo $PWD |cut -d'/' -f1-3`"/TM_TMPDIR/"$SLURM_JOB_ID
+mkdir -p $TURBOTMPDIR
+export PARNODES=$SLURM_NTASKS  # for MPI
+export PATH=$TURBODIR/bin/`$TURBODIR/scripts/sysname`:$PATH
+
+#for i in $(seq -f "%03g" $1 1 $2 ); do
+#  cd ./cluster_${i}
+#  cp -f ../define_input .
+#  define < define_input
+#  sed '/$end/i $senex ' control  > temp
+#  sed -i '/$senex/a gridsize  m3 ' temp
+#  sed -i '/$end/i $esenex ' temp
+#  sed -i '/$esenex/a gridsize  m3 ' temp
+#  sed -i '/$end/i $dsenex ' temp
+#  sed -i '/$dsenex/a gridsize  m3 ' temp
+#  sed -i '/gridsize  m3/a do_sfit ' temp
+#  mv temp control
+#  rm -f mos
+#  cp -f ../../PBE_SVP/FINISHED/cluster_${i}/mos .
+ cp -f ../mos .
+  ridft > ridft.out
+  rdgrad > rdgrad.out
+  mpshift > mpshift.out
+#  cd ..
+#done
+
+

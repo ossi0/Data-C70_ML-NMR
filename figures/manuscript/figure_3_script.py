@@ -16,7 +16,7 @@ forces = []
 true_forces = []
 energies = []
 true_energies = []
-for i, frame in enumerate(ase.io.iread('./data/dft/test_dataset0.xyz')):
+for i, frame in enumerate(ase.io.iread('../../data/dft/test_dataset0.xyz')):
     forces.append(frame.get_forces().flatten())
     true_forces.append(frame.arrays["original_dataset_forces"].flatten())
     energies.append(frame.get_potential_energy())
@@ -126,5 +126,5 @@ ax.set_yticks([-10970, -10963, -10954])
 ax.legend([r'$\text{He}_{2}@\text{C}_{70}^{6-}$'], loc="lower right", fontsize=20)
 
 # Save the figure
-plt.savefig('nequip_anion_mdl_correlation.png')
+plt.savefig('figure_3.png')
 plt.show()

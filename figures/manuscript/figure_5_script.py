@@ -8,8 +8,8 @@ import sklearn
 
 
 #Sigma iso values
-train_sigma_iso = np.loadtxt('./data/dft/sigma/iso_pred_DFT2.txt', usecols=0)
-true_sigma_iso = np.loadtxt('./data/dft/sigma/iso_true_DFT2.txt', usecols=0)
+train_sigma_iso = np.loadtxt('../../data/dft/sigma/iso_pred_DFT2.txt', usecols=0)
+true_sigma_iso = np.loadtxt('../../data/dft/sigma/iso_true_DFT2.txt', usecols=0)
 
 #Create data frame
 iso_fr = pd.DataFrame({"Sigma_true": true_sigma_iso, "Sigma_pred": train_sigma_iso, "index":"sigma_iso"})
@@ -52,5 +52,5 @@ ax_joint0.set_xlabel(r'$^{3}\text{He}\ \sigma_{\text{iso}}^{\text{DFT}}$ (ppm)',
 ax_joint0.set_ylabel(r'$^{3}\text{He}\ \sigma_{\text{iso}}^{\text{ML}}$ (ppm)', fontsize=16)
 
 # Save the figure
-plt.savefig('C70_He_an_iso_corr.png', dpi=300)
+plt.savefig('figure_5.png', dpi=300)
 plt.show()

@@ -9,12 +9,12 @@ from matplotlib.lines import Line2D
 SIGMA_HE = 59.874
 
 # Load th data
-C70_di_an = np.loadtxt('data/sigma_predicted_dimer/1b_gle/sig_di_avg.txt')
-C70_mono_an = np.loadtxt('data/sigma_predicted_monomer/1b_gle/sig_mono_avg.txt')
-C70_di_an_pimd = np.loadtxt('data/sigma_predicted_dimer/4b_piglet/sig_di_avg.txt')
-C70_mono_an_pimd = np.loadtxt('data/sigma_predicted_monomer/4b_piglet/sig_mono_avg.txt')
-C70_di_an_pileg_1b = np.loadtxt('data/sigma_predicted_dimer/1b_pileg/sig_di_avg.txt')
-C70_mono_an_pileg_1b = np.loadtxt('data/sigma_predicted_monomer/1b_pileg/sig_mono_avg.txt')
+C70_di_an = np.loadtxt('../../data/sigma_predicted_dimer/1b_gle/sig_di_avg.txt')
+C70_mono_an = np.loadtxt('../../data/sigma_predicted_monomer/1b_gle/sig_mono_avg.txt')
+C70_di_an_pimd = np.loadtxt('../../data/sigma_predicted_dimer/4b_piglet/sig_di_avg.txt')
+C70_mono_an_pimd = np.loadtxt('../../data/sigma_predicted_monomer/4b_piglet/sig_mono_avg.txt')
+C70_di_an_pileg_1b = np.loadtxt('../../data/sigma_predicted_dimer/1b_pileg/sig_di_avg.txt')
+C70_mono_an_pileg_1b = np.loadtxt('../../data/sigma_predicted_monomer/1b_pileg/sig_mono_avg.txt')
 
 # Calculate statistics
 mono_mean_an = np.round(np.mean(C70_mono_an_pimd), 3)
@@ -116,5 +116,5 @@ plt.setp(ax1.get_legend().get_texts(), fontsize='12') # for legend text
 plt.setp(ax1.get_legend().get_title(), fontsize='12') # for legend title
 
 # Save the figure as png
-plt.savefig('dist_anion.png', dpi=300)
+plt.savefig('figure_7.png', dpi=300)
 plt.show()

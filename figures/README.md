@@ -40,10 +40,10 @@ To reproduce the figures and analyze the data, you will need the following:
 
 | **Figure** | **Script** | **Dataset** |
 |------------|------------|-------------|
-| [Figure S1](./supporting_information/figure_S1.png) | [Script](./supporting_information/figure_S1_script.py) | [Script](./supporting_information/figure_S1_script.py) |
-| [Figure S2](./supporting_information/figure_S2.png) | [Script](./supporting_information/figure_S2_script.py) | [Script](./supporting_information/figure_S2_script.py) |
+| [Figure S1](./supporting_information/figure_S1.png) | [Script](./supporting_information/figure_S1_script.py) | [Data](./supporting_information/figure_S1_script.py) |
+| [Figure S2](./supporting_information/figure_S2.png) | [Script](./supporting_information/figure_S2_script.py) | [Data](./supporting_information/figure_S2_script.py) |
 | [Figure S3](./supporting_information/figure_S3.png) | [Script](./supporting_information/figure_S3_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) |
-| [Figure S4](./supporting_information/figure_S4.png) | [Script](./supporting_information/figure_S4_script.py) | [Script](./supporting_information/figure_S4_script.py) |
+| [Figure S4](./supporting_information/figure_S4.png) | [Script](./supporting_information/figure_S4_script.py) | [Data](./supporting_information/figure_S4_script.py) |
 | [Figure S5](./supporting_information/figure_S5.png) | [Script](./supporting_information/figure_S5_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) |
 | [Figure S6](./supporting_information/figure_S6.png) | [Script](./supporting_information/figure_S6_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) |
 | [Figure S7](./supporting_information/figure_S7.png) | [Script](./supporting_information/figure_S7_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) |

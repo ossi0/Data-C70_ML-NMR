@@ -16,7 +16,7 @@
 
 ---
 
-This is the supporting code for the manuscript “***Machine Learning For NMR Observables Sensitive to Nuclear Quantum Effects***”. [DOI: https://doi.org/TBA]
+This is the supporting code for the manuscript “***Machine Learning For NMR Observables Sensitive to Nuclear Quantum Effects***”. [![DOI](https://img.shields.io/badge/DOI-10.26434%2Fchemrxiv.15011276/v1-yellow.svg)](https://doi.org/10.26434/chemrxiv.15011276/v1)
 
 The repository comprises the following sections:
 
@@ -36,19 +36,19 @@ The repository comprises the following sections:
 ## Citations
 If you use this data, please cite the following:
 
-### Paper [![DOI](https://img.shields.io/badge/DOI%2FTBA-yellow.svg)](https://doi.org/TBA)
+### Paper [![DOI](https://img.shields.io/badge/DOI-10.26434%2Fchemrxiv.15011276/v1-yellow.svg)](https://doi.org/10.26434/chemrxiv.15011276/v1)
 
 ```bibtex
 @article{laurila_2026_c70_ml_nmr,
-  title={Machine Learning For NMR Observables Sensitive to Nuclear Quantum Effects},
+  title={Machine Learning for NMR Observables Sensitive to Nuclear Quantum Effects},
   author={Laurila, Ossi, and Zakary, Ouail and Lantto, Perttu},
-  journal={XXX},
+  journal={ChemRxiv},
   year={2026},
-  volume = {XXX},
-  number = {XX},
-  pages = {XXXX--XXXX},
-  doi={TBA},
-  url={TBA}
+  volume = {},
+  number = {},
+  pages = {},
+  doi={10.26434/chemrxiv.15011276/v1},
+  url={https://doi.org/10.26434/chemrxiv.15011276/v1}
 }
 ```
 
@@ -69,7 +69,7 @@ If you use this data, please cite the following:
 ```bibtex
 @misc{laurila_2026_github_c70_ml_nmr,
   author = {Laurila, Ossi, and Zakary, Ouail and Lantto, Perttu},
-  title = {Supporting Code for "Machine Learning For NMR Observables Sensitive to Nuclear Quantum Effects"},
+  title = {Supporting Code for "Machine Learning for NMR Observables Sensitive to Nuclear Quantum Effects"},
   year = {2026},
   publisher = {GitHub},
   journal = {GitHub repository},

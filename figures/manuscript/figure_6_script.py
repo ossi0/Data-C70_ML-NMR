@@ -4,25 +4,15 @@ import matplotlib.pyplot as plt
 
 def load_data():
     paths = {
-        "class": (
-            "../../data/sigma_predicted_dimer/1b_gle/sig_di_avg.txt",
-            "../../data/sigma_predicted_monomer/1b_gle/sig_mono_avg.txt",
-            800000,
-        ),
-        "pileg": (
-            "../../data/sigma_predicted_dimer/1b_pileg/sig_di_avg.txt",
-            "../../data/sigma_predicted_monomer/1b_pileg/sig_mono_avg.txt",
-            800000,
+        "nhc": (
+            "data/sigma_predicted_dimer/1b_nhc/sig_di_avg.txt",
+            "data/sigma_predicted_monomer/1b_nhc/sig_mono_avg.txt",
+            1100000,
         ),
         "pimd": (
-            "../../data/sigma_predicted_dimer/4b_piglet/sig_di_avg.txt",
-            "../../data/sigma_predicted_monomer/4b_piglet/sig_mono_avg.txt",
-            800000,
-        ),
-        "8b": (
-            "../../data/sigma_predicted_dimer/8b_piglet/sig_di_avg.txt",
-            "../../data/sigma_predicted_monomer/8b_piglet/sig_mono_avg.txt",
-            250000,
+            "data/sigma_predicted_dimer/4b_piglet/sig_di_avg.txt",
+            "data/sigma_predicted_monomer/4b_piglet/sig_mono_avg.txt",
+            875000,
         ),
     }
 
@@ -42,8 +32,8 @@ def running_stats(data, interval=50000):
 
     for i in intervals:
         chunk = data[:i]
-        means.append(np.round(np.mean(chunk), 3))
-        sems.append(np.round(np.std(chunk) / np.sqrt(len(chunk)), 4))
+        means.append(np.round(np.mean(chunk), 5))
+        sems.append(np.round(np.std(chunk) / np.sqrt(len(chunk)), 5))
 
     return list(intervals), means, sems
 
@@ -68,21 +58,19 @@ results = {
 }
 
 # Initialize the plot area
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 6))
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(6, 8))
 fig.subplots_adjust(
-    left=0.123, right=0.943, wspace=0.417,
-    top=0.932, bottom=0.13, hspace=0.375
+    left=0.151, right=0.957, wspace=0.2,
+    top=0.97, bottom=0.077, hspace=0.177
 )
 
 # Shielding of a free He atom
-shift = 59.874
+shift = 59.8627
 
 # Plot markers, linestyles and colors
 styles = {
-    "class": ("o", 8, "#78add2", "#ffb26e"),
-    "pileg": ("*", 10, "#78add2", "#ffb26e"),
-    "pimd": ("v", 8, "#78add2", "#ffb26e"),
-    "8b": ("d", 8, "#78add2", "#ffb26e"),
+    "nhc": ("o", 6, "#78add2", "#ffb26e"),
+    "pimd": ("v", 6, "#78add2", "#ffb26e"),
 }
 
 handles = {}
@@ -102,37 +90,41 @@ for name, (intervals, mono, dimer, mono_sem, dimer_sem, diff, diff_sem) in resul
     )
 
 # Plot the chemical shift data
-ax1.set_xlabel("Number of snapshots (x1000)", fontsize=14)
-ax1.set_ylabel(r'$^{3}\text{He}\ \delta_{\text{iso}}$ (ppm)', fontsize=14)
+#ax1.set_xlabel("Number of snapshots (x1000)", fontsize=14)
+ax1.set_ylabel(r'$^{3}\text{He}\ \langle \delta_{\text{iso}} \rangle$ (ppm)', fontsize=14)
 ax1.tick_params(axis="both", labelsize=14)
-ax1.set_ylim(8.65, 9.35)
-ax1.set_xlim(0, 820)
-ax1.set_xticks([0, 200, 400, 600, 800])
+ax1.set_ylim(8.7, 9.4)
+ax1.set_xlim(0, 1200)
+ax1.set_xticks([0, 200, 400, 600, 800, 1000, 1200])
+ax1.grid(True)
+
+exp_mono = ax1.axline(
+    xy1=(0, 8.198), slope=0,
+    color="black", linestyle="solid", linewidth=3
+)
+exp_di = ax1.axline(
+    xy1=(0, 8.044), slope=0,
+    color="black", linestyle="--", linewidth=3
+)
+
 ax1.legend(
     [
-        handles["8b"][0], handles["8b"][1],
         handles["pimd"][0], handles["pimd"][1],
-        handles["class"][0], handles["class"][1],
-        handles["pileg"][0], handles["pileg"][1],
+        handles["nhc"][0], handles["nhc"][1]
     ],
     [
-        r'${\delta}_{\text{iso}}[\text{mono}]$ (P=8, PIGLET)',
-        r'${\delta}_{\text{iso}}[\text{dimer}]$ (P=8, PIGLET)',
-        r'${\delta}_{\text{iso}}[\text{mono}]$ (P=4, PIGLET)',
-        r'${\delta}_{\text{iso}}[\text{dimer}]$ (P=4, PIGLET)',
-        r'${\delta}_{\text{iso}}[\text{mono}]$ (P=1, GLE)',
-        r'${\delta}_{\text{iso}}[\text{dimer}]$ (P=1, GLE)',
-        r'${\delta}_{\text{iso}}[\text{mono}]$ (P=1, PILE-G)',
-        r'${\delta}_{\text{iso}}[\text{dimer}]$ (P=1, PILE-G)',
+        r'${\delta}_{\text{iso}}[\text{mono}]$ (P=4)',
+        r'${\delta}_{\text{iso}}[\text{dimer}]$ (P=4)',
+        r'${\delta}_{\text{iso}}[\text{mono}]$ (P=1)',
+        r'${\delta}_{\text{iso}}[\text{dimer}]$ (P=1)'
     ],
-    fontsize=10, loc="center right", bbox_to_anchor=(0.9, 0.59)
+    #fontsize=10, loc="upper right", bbox_to_anchor=(0.996, 0.996)
+    fontsize=10, loc="best"
 )
 
 diff_styles = {
-    "class": ("o", "tomato"),
-    "pileg": ("*", "orange"),
-    "pimd": ("v", "slateblue"),
-    "8b": ("d", "limegreen"),
+    "nhc": ("o", "blue"),
+    "pimd": ("v", "red"),
 }
 
 diff_handles = {}
@@ -147,22 +139,27 @@ for name, (intervals, _, _, _, _, diff, diff_sem) in results.items():
 ax2.set_xlabel("Number of snapshots (x1000)", fontsize=14)
 ax2.set_ylabel(r'$^{3}\text{He}\ \Delta\delta_{\text{iso}}$ (ppm)', fontsize=14)
 ax2.tick_params(axis="both", labelsize=14)
-ax2.set_xlim(0, 820)
-ax2.set_xticks([0, 200, 400, 600, 800])
-ax2.set_yticks([0, 0.05, 0.1, 0.15, 0.2])
-ax2.set_ylim(0, 0.20)
+ax2.set_xlim(0, 1200)
+ax2.set_xticks([0, 200, 400, 600, 800, 1000, 1200])
+ax2.set_yticks([0.04, 0.06, 0.08, 0.10, 0.12, 0.14, 0.16, 0.18])
+ax2.set_ylim(0.04, 0.18)
+ax2.grid(True)
 
 exp = ax2.axline(
     xy1=(0, 0.154), slope=0,
-    color="brown", linestyle="--", linewidth=3
+    color="black", linestyle="--", linewidth=2
+)
+
+eq_geom = ax2.axline(
+    xy1=(0, 0.161), slope=0,
+    color="brown", linestyle="--", linewidth=2
 )
 
 ax2.legend(
-    [exp, diff_handles["8b"], diff_handles["pimd"],
-     diff_handles["class"], diff_handles["pileg"]],
-    [r'${^a}$exp', "P=8, PIGLET", "P=4, PIGLET",
-     "P=1, GLE", "P=1, PILE-G"],
-    fontsize=10, loc="lower left"
+     [exp, eq_geom, diff_handles["pimd"],
+     diff_handles["nhc"]],
+    [r'exp', r'eq. geom.', "P=4", "P=1"],
+    fontsize=10, loc="lower right"
 )
 
 # Save the figure

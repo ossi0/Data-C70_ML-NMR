@@ -12,6 +12,8 @@
 
 This folder contains the figures, Python scripts, datasets, and additional metadata (README and description files) used to generate the figures related to the NMR-ML model in the paper and supporting information documents of “***Machine Learning For NMR Observables Sensitive to Nuclear Quantum Effects***”.
 
+[![DOI](https://img.shields.io/badge/DOI-10.26434%2Fchemrxiv.15011276/v1-yellow.svg)](https://doi.org/10.26434/chemrxiv.15011276/v1)
+
 ## Requirements
 
 To reproduce the figures and analyze the data, you will need the following:

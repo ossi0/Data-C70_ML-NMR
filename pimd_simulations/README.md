@@ -17,13 +17,15 @@ Example PIMD simulation runs with the resulting output files for the He@C<sub>70
 
 
 ### PIMD simulations of He@C<sub>70</sub><sup>6-</sup>
-Eight sub-directories are provided, which include the input files to start the equilibrium and production simulation runs
-- [pimd_dimer_GLE](./pimd_dimer_GLE)
-- [pimd_dimer_PILE-G](./pimd_dimer_PILE-G)
+10 sub-directories are provided, which include the input files to start the equilibrium and production simulation runs
+- [md_dimer_GLE](./md_dimer_GLE)
+- [md_dimer_PILE-G](./md_dimer_PILE-G)
+- [md_dimer_NHC](./md_dimer_NHC)
 - [pimd_dimer_PIGLET-P4](./pimd_dimer_PIGLET-P4)
 - [pimd_dimer_PIGLET-P8](./pimd_dimer_PIGLET-P8)
-- [pimd_mono_GLE](./pimd_mono_GLE)
-- [pimd_mono_PILE-G](./pimd_mono_PILE-G)
+- [md_mono_GLE](./md_mono_GLE)
+- [md_mono_PILE-G](./md_mono_PILE-G)
+- [md_mono_NHC](./md_mono_NHC)
 - [pimd_mono_PIGLET-P4](./pimd_mono_PIGLET-P4)
 - [pimd_mono_PIGLET-P8](./pimd_mono_PIGLET-P8)
 

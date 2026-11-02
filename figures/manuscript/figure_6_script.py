@@ -5,13 +5,13 @@ import matplotlib.pyplot as plt
 def load_data():
     paths = {
         "nhc": (
-            "data/sigma_predicted_dimer/1b_nhc/sig_di_avg.txt",
-            "data/sigma_predicted_monomer/1b_nhc/sig_mono_avg.txt",
+            "../../data/sigma_predicted_dimer/1b_nhc/sig_di_avg.txt",
+            "../../data/sigma_predicted_monomer/1b_nhc/sig_mono_avg.txt",
             1100000,
         ),
         "pimd": (
-            "data/sigma_predicted_dimer/4b_piglet/sig_di_avg.txt",
-            "data/sigma_predicted_monomer/4b_piglet/sig_mono_avg.txt",
+            "../../data/sigma_predicted_dimer/4b_piglet/sig_di_avg.txt",
+            "../../data/sigma_predicted_monomer/4b_piglet/sig_mono_avg.txt",
             875000,
         ),
     }

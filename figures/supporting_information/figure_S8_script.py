@@ -45,7 +45,7 @@ def plot_distribution(
         hue="Simulation",
         ax=ax,
         common_norm=False,
-        palette=["blue", "green", "orange"],
+        palette=["blue", "orange", "red"],
     )
 
     ax.plot(
@@ -60,8 +60,8 @@ def plot_distribution(
 
     handles = [
         Line2D([0], [0], color="blue", lw=2, label=legend_labels[0]),
-        Line2D([0], [0], color="green", lw=2, label=legend_labels[1]),
-        Line2D([0], [0], color="orange", lw=2, label=legend_labels[2]),
+        Line2D([0], [0], color="orange", lw=2, label=legend_labels[1]),
+        Line2D([0], [0], color="red", lw=2, label=legend_labels[2]),
         Line2D(
             [0],
             [0],
@@ -85,7 +85,7 @@ def plot_distribution_nolegend(
         hue="Simulation",
         ax=ax,
         common_norm=False,
-        palette=["blue", "green", "orange"],
+        palette=["blue", "orange", "red"],
     )
 
     ax.plot(
@@ -130,7 +130,7 @@ print(
     + str(np.round(np.std(he_he_class_pileg) / (len(he_he_class_pileg) ** (1 / 2)), 4))
 )
 print(
-    "Classical (PI+GLE) He-He average distance: "
+    "Classical (GLE) He-He average distance: "
     + str(np.round(np.mean(he_he_class_gle), 4))
     + " ± "
     + str(

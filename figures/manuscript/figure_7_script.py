@@ -10,10 +10,10 @@ from matplotlib.ticker import (MultipleLocator, AutoMinorLocator)
 SIGMA_HE = 59.8627
 
 # Load th data
-C70_di_an_pimd = np.loadtxt('data/sigma_predicted_dimer/4b_piglet/sig_all.txt')
-C70_mono_an_pimd = np.loadtxt('data/sigma_predicted_monomer/4b_piglet/sig_all.txt')
-C70_di_an_nhc_1b = np.loadtxt('data/sigma_predicted_dimer/1b_nhc/sig_di_avg.txt')
-C70_mono_an_nhc_1b = np.loadtxt('data/sigma_predicted_monomer/1b_nhc/sig_mono_avg.txt')
+C70_di_an_pimd = np.loadtxt('../../data/sigma_predicted_dimer/4b_piglet/sig_all.txt')
+C70_mono_an_pimd = np.loadtxt('../../data/sigma_predicted_monomer/4b_piglet/sig_all.txt')
+C70_di_an_nhc_1b = np.loadtxt('../../data/sigma_predicted_dimer/1b_nhc/sig_di_avg.txt')
+C70_mono_an_nhc_1b = np.loadtxt('../../data/sigma_predicted_monomer/1b_nhc/sig_mono_avg.txt')
 
 # Calculate statistics
 mono_mean_an = np.round(np.mean(C70_mono_an_pimd), 3)

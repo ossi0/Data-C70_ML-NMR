@@ -6,6 +6,9 @@ import matplotlib.pyplot as plt
 import ase.io
 from sklearn.metrics import mean_squared_error
 import sklearn
+import seaborn as sns
+import pandas as pd
+from matplotlib.lines import Line2D
 
 plt.rcParams['axes.formatter.useoffset'] = False
 plt.rcParams['axes.formatter.use_locale'] = False
@@ -32,30 +35,16 @@ true_energies_dimer = [x for x in true_energies if x < -10900]
 energies_mono = [x for x in energies if x > -10900]
 energies_dimer = [x for x in energies if x < -10900]
 
+# Create Pandas DataFrames
+energy_fr_mono = pd.DataFrame({r'$E_{\text{DFT}}$ (eV/structure)': true_energies_mono, r'$E_{\text{ML}}$ (eV/structure)': energies_mono, "index":"energy"})
+energy_fr_di = pd.DataFrame({r'$E_{\text{DFT}}$ (eV/structure)': true_energies_dimer, r'$E_{\text{ML}}$ (eV/structure)': energies_dimer, "index":"energy"})
+energy_fr_both = pd.DataFrame({r'$E_{\text{DFT}}$ (eV/structure)': true_energies, r'$E_{\text{ML}}$ (eV/structure)': energies, "index":"energy"})
+
+force_fr = pd.DataFrame({'DFT': true_forces, 'ML': forces, "index":"force"})
+
 # Initialize the plot area
 fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(11, 8))
 fig.subplots_adjust(left=0.149, right=0.943, wspace=0.62, top=0.957, bottom=0.094, hspace=0.375)
-
-#Calculate statistics for the forces
-r2_0 = sklearn.metrics.r2_score(forces, true_forces)
-rmse_0 = sklearn.metrics.root_mean_squared_error(forces, true_forces)
-mae_0 = sklearn.metrics.mean_absolute_error(forces, true_forces)
-
-# Plot axis1
-ax = ax1
-ax.set_xlabel(r'$\vec f_{\text{DFT}}$ (eV/Å)', fontsize=20)
-ax.set_ylabel(r'$\vec f_{\text{ML}}$ (eV/Å)', fontsize=20)
-ax.scatter(true_forces, forces, marker = 'o', alpha=0.4, color='orange')
-ax.plot([-15, 15], [-15, 15], linestyle="--", color="gray")
-ax.plot([min(true_forces), max(true_forces)], [min(forces), max(forces)], linestyle="solid", color="black")
-ax.set_title('All systems', fontsize=20)
-ax.tick_params(axis='x', labelsize=19)
-ax.tick_params(axis='y', labelsize=19)
-ax.text(0.05, 0.90, f'R$^2$ = {r2_0:.4f}', fontsize=20, transform=ax.transAxes)
-ax.text(0.05, 0.81, f'RMSE = {rmse_0:.3f}', fontsize=20, transform=ax.transAxes)
-ax.text(0.05, 0.72, f'MAE = {mae_0:.3f}', fontsize=20, transform=ax.transAxes)
-ax.set_xticks([-10, 0, 10])
-ax.set_yticks([-10, 0, 10])
 
 #Calculate statistics for the energies
 r2_0 = sklearn.metrics.r2_score(energies, true_energies)
@@ -70,14 +59,14 @@ r2_0_dimer = sklearn.metrics.r2_score(energies_dimer, true_energies_dimer)
 rmse_0_dimer = sklearn.metrics.root_mean_squared_error(energies_dimer, true_energies_dimer)
 mae_0_dimer = sklearn.metrics.mean_absolute_error(energies_dimer, true_energies_dimer)
 
-# Plot axis2
-ax = ax2
+# Plot axis1
+ax = ax1
 ax.set_xlabel(r'$E_{\text{DFT}}$ (eV/structure)', fontsize=20)
 ax.set_ylabel(r'$E_{\text{ML}}$ (eV/structure)', fontsize=20)
-ax.scatter(true_energies_mono, energies_mono, marker = 'o', alpha=0.4, color='green')
-ax.scatter(true_energies_dimer, energies_dimer, marker = 'o', alpha=0.4, color='blue')
 ax.plot([-10980, -10860], [-10980, -10860], linestyle="--", color="gray")
-ax.plot([min(true_energies), max(true_energies)], [min(energies), max(energies)], linestyle="solid", color="black")
+plot1_both = sns.regplot(data=energy_fr_both, x=r'$E_{\text{DFT}}$ (eV/structure)', y=r'$E_{\text{ML}}$ (eV/structure)', ci=99, marker="o", color="white", line_kws=dict(color="black", lw=2), scatter_kws={'alpha':0.3}, ax=ax1)
+plot1_mono = sns.regplot(data=energy_fr_mono, x=r'$E_{\text{DFT}}$ (eV/structure)', y=r'$E_{\text{ML}}$ (eV/structure)', ci=99, marker="o", color="limegreen", line_kws=dict(color="black", lw=2), scatter_kws={'alpha':0.3}, ax=ax1)
+plot1_di = sns.regplot(data=energy_fr_di, x=r'$E_{\text{DFT}}$ (eV/structure)', y=r'$E_{\text{ML}}$ (eV/structure)', ci=99, marker="o", color="slateblue", line_kws=dict(color="black", lw=2), scatter_kws={'alpha':0.3}, ax=ax1)
 ax.set_xlim([-10980, -10860])
 ax.set_ylim([-10980, -10860])
 ax.set_title('All systems', fontsize=20)
@@ -89,13 +78,36 @@ ax.text(0.05, 0.72, f'MAE = {mae_0:.3f}', fontsize=20, transform=ax.transAxes)
 ax.set_xticks([-10980, -10920, -10860])
 ax.set_yticks([-10980, -10920, -10860])
 
+#Calculate statistics for the forces
+r2_0 = sklearn.metrics.r2_score(forces, true_forces)
+rmse_0 = sklearn.metrics.root_mean_squared_error(forces, true_forces)
+mae_0 = sklearn.metrics.mean_absolute_error(forces, true_forces)
+
+# Plot axis2
+ax = ax2
+ax.set_xlabel(r'$\vec f_{\text{DFT}}$ (eV/Å)', fontsize=20)
+ax.set_ylabel(r'$\vec f_{\text{ML}}$ (eV/Å)', fontsize=20)
+ax.plot([-15, 15], [-15, 15], linestyle="--", color="gray")
+#x.scatter(true_forces, forces, marker = 'o', alpha=0.3, color='orange')
+plot2_force = sns.regplot(data=force_fr, x='DFT', y='ML', ci=99, marker="o", color="orange", line_kws=dict(color="black", lw=2), scatter_kws={'alpha':0.3}, ax=ax2).set(
+    xlabel=r'$\vec f_{\text{DFT}}$ (eV/Å)', 
+    ylabel=r'$\vec f_{\text{ML}}$ (eV/Å)'
+)
+ax.set_title('All systems', fontsize=20)
+ax.tick_params(axis='x', labelsize=19)
+ax.tick_params(axis='y', labelsize=19)
+ax.text(0.05, 0.90, f'R$^2$ = {r2_0:.4f}', fontsize=20, transform=ax.transAxes)
+ax.text(0.05, 0.81, f'RMSE = {rmse_0:.3f}', fontsize=20, transform=ax.transAxes)
+ax.text(0.05, 0.72, f'MAE = {mae_0:.3f}', fontsize=20, transform=ax.transAxes)
+ax.set_xticks([-10, 0, 10])
+ax.set_yticks([-10, 0, 10])
+
 # Plot axis3
 ax = ax3
 ax.set_xlabel(r'$E_{\text{DFT}}$ (eV/structure)', fontsize=20)
 ax.set_ylabel(r'$E_{\text{ML}}$ (eV/structure)', fontsize=20)
-ax.scatter(true_energies, energies, marker = 'o', alpha=0.4, color='green')
 ax.plot([-10890, -10874], [-10890, -10874], linestyle="--", color="gray")
-ax.plot([min(true_energies_mono), max(true_energies_mono)], [min(energies_mono), max(energies_mono)], linestyle="solid", color="black")
+plot3_mono = sns.regplot(data=energy_fr_mono, x=r'$E_{\text{DFT}}$ (eV/structure)', y=r'$E_{\text{ML}}$ (eV/structure)', ci=99, marker="o", color="limegreen", line_kws=dict(color="black", lw=2), scatter_kws={'alpha':0.3}, ax=ax3)
 ax.set_xlim([-10890, -10875])
 ax.set_ylim([-10890, -10875])
 ax.tick_params(axis='x', labelsize=19)
@@ -105,15 +117,25 @@ ax.text(0.05, 0.81, f'RMSE = {rmse_0_mono:.3f}', fontsize=20, transform=ax.trans
 ax.text(0.05, 0.72, f'MAE = {mae_0_mono:.3f}', fontsize=20, transform=ax.transAxes)
 ax.set_xticks([-10890, -10883, -10874])
 ax.set_yticks([-10890, -10883, -10874])
-ax.legend([r'$\text{He}@\text{C}_{70}^{6-}$'], loc="lower right", fontsize=20)
+
+# Custom legend handle showing scatter points only
+scatter_handle = Line2D(
+    [], [],
+    color='limegreen',
+    marker='o',
+    linestyle='None',
+    markersize=10,
+    alpha=0.5,
+    label=r'$\text{He}@\text{C}_{70}^{6-}$'
+)
+ax.legend(handles=[scatter_handle], loc="lower right", fontsize=20)
 
 # Plot axis4
 ax = ax4
 ax.set_xlabel(r'$E_{\text{DFT}}$ (eV/structure)', fontsize=20)
 ax.set_ylabel(r'$E_{\text{ML}}$ (eV/structure)', fontsize=20)
-ax.scatter(true_energies, energies, marker = 'o', alpha=0.4, color='blue')
 ax.plot([-10970, -10954], [-10970, -10954], linestyle="--", color="gray")
-ax.plot([min(true_energies_dimer), max(true_energies_dimer)], [min(energies_dimer), max(energies_dimer)], linestyle="solid", color="black")
+plot4_di = sns.regplot(data=energy_fr_di, x=r'$E_{\text{DFT}}$ (eV/structure)', y=r'$E_{\text{ML}}$ (eV/structure)', ci=99, marker="o", color="slateblue", line_kws=dict(color="black", lw=2), scatter_kws={'alpha':0.3}, ax=ax4)
 ax.set_xlim([-10970, -10955])
 ax.set_ylim([-10970, -10955])
 ax.tick_params(axis='x', labelsize=19)
@@ -123,7 +145,18 @@ ax.text(0.05, 0.81, f'RMSE = {rmse_0_dimer:.3f}', fontsize=20, transform=ax.tran
 ax.text(0.05, 0.72, f'MAE = {mae_0_dimer:.3f}', fontsize=20, transform=ax.transAxes)
 ax.set_xticks([-10970, -10963, -10954])
 ax.set_yticks([-10970, -10963, -10954])
-ax.legend([r'$\text{He}_{2}@\text{C}_{70}^{6-}$'], loc="lower right", fontsize=20)
+
+# Custom legend handle showing scatter points only
+scatter_handle = Line2D(
+    [], [],
+    color='slateblue',
+    marker='o',
+    linestyle='None',
+    markersize=10,
+    alpha=0.5,
+    label=r'$\text{He}_{2}@\text{C}_{70}^{6-}$'
+)
+ax.legend(handles=[scatter_handle], loc="lower right", fontsize=20)
 
 # Save the figure
 plt.savefig('figure_3.png')

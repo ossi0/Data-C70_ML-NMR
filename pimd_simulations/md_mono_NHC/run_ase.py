@@ -22,9 +22,9 @@ atoms.set_calculator(calc)
 atoms.set_constraint(FixCom())
 MaxwellBoltzmannDistribution(atoms, temperature_K=300)
 
-temperature_K = 300.0                       # Kohdelämpötila Kelvineinä
-timestep = 0.5 * units.fs                   # Aikajakso (1 femtosekunti)
-ttime = 100 * units.fs                     # Termostaatin tyypillinen vasteaika (laimeus)
+temperature_K = 300.0
+timestep = 0.5 * units.fs
+ttime = 100 * units.fs
 
 dyn = NoseHooverChainNVT(
     atoms,

@@ -20,12 +20,12 @@ data_hehe_err_pileg = [0.0003, 0.0007, 0.0008]
 
 #d(C-He)
 data_che_x_piglet = [1, 2, 4, 8, 16]
-data_che_y_piglet = [3.9629, 3.9731, 3.9732, 3.9731, 3.9732]
-data_che_err_piglet = [0.0005, 0.0002, 0.0002, 0.0003, 0.0003]
+data_che_y_piglet = [3.9631, 3.9732, 3.9732, 3.9731, 3.9732]
+data_che_err_piglet = [0.0004, 0.0002, 0.0002, 0.0003, 0.0003]
 
 data_che_x_pileg = [1, 4, 16]
-data_che_y_pileg = [3.9629, 3.9696, 3.9732]
-data_che_err_pileg = [0.0005, 0.0003, 0.0003]
+data_che_y_pileg = [3.9631, 3.9696, 3.9732]
+data_che_err_pileg = [0.0004, 0.0003, 0.0003]
 
 #d(He-COM)
 data_hecom_x_piglet = [1, 2, 4, 8, 16]
@@ -38,12 +38,12 @@ data_hecom_err_pileg = [0.0002, 0.0004, 0.0007]
 
 #3He sigma_iso
 data_sigma_x_piglet = [1, 2, 4, 8, 16]
-data_sigma_y_piglet = [51.074, 50.7383, 50.6398, 50.632, 50.636]
-data_sigma_err_piglet = [0.009, 0.0154, 0.0203, 0.0197, 0.025]
+data_sigma_y_piglet = [51.075, 50.739, 50.669, 50.645, 50.636]
+data_sigma_err_piglet = [0.002, 0.015, 0.003, 0.003, 0.025]
 
 data_sigma_x_pileg = [1, 4, 16]
-data_sigma_y_pileg = [51.074, 50.892, 50.654]
-data_sigma_err_pileg = [0.009, 0.009, 0.013]
+data_sigma_y_pileg = [51.075, 50.892, 50.654]
+data_sigma_err_pileg = [0.002, 0.009, 0.013]
 
 #Plot
 plt.rcParams.update({'font.size': 16})

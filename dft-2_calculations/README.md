@@ -13,7 +13,7 @@
 This repository contains the structure generation conditions for the DATA-2 dataset, and calculation conditions used in the DFT reference data computations for the NMR-ML model of He@C<sub>70</sub><sup>6-</sup> and He<sub>2</sub>@C<sub>70</sub><sup>6-</sup> endohedral fullerene systems described in the paper “***Machine Learning For NMR Observables Sensitive to Nuclear Quantum Effects***”.
 
 
-[![DOI](https://img.shields.io/badge/DOI-10.26434%2Fchemrxiv.15011276/v1-yellow.svg)](https://doi.org/10.26434/chemrxiv.15011276/v1)
+[![DOI](https://img.shields.io/badge/DOI-10.26434%2Fchemrxiv.15011276/v2-yellow.svg)](https://doi.org/10.26434/chemrxiv.15011276/v2)
 
 ## Generating the dataset structures
 

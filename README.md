@@ -16,7 +16,7 @@
 
 ---
 
-This is the supporting code for the manuscript “***Machine Learning For NMR Observables Sensitive to Nuclear Quantum Effects***”. [![DOI](https://img.shields.io/badge/DOI-10.26434%2Fchemrxiv.15011276/v1-yellow.svg)](https://doi.org/10.26434/chemrxiv.15011276/v2)
+This is the supporting code for the manuscript “***Machine Learning For NMR Observables Sensitive to Nuclear Quantum Effects***”. [![DOI](https://img.shields.io/badge/DOI-10.26434%2Fchemrxiv.15011276/v2-yellow.svg)](https://doi.org/10.26434/chemrxiv.15011276/v2)
 
 The repository comprises the following sections:
 

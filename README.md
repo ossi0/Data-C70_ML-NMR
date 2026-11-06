@@ -36,7 +36,7 @@ The repository comprises the following sections:
 ## Citations
 If you use this data, please cite the following:
 
-### Paper [![DOI](https://img.shields.io/badge/DOI-10.26434%2Fchemrxiv.15011276/v1-yellow.svg)](https://doi.org/10.26434/chemrxiv.15011276/v1)
+### Paper [![DOI](https://img.shields.io/badge/DOI-10.26434%2Fchemrxiv.15011276/v2-yellow.svg)](https://doi.org/10.26434/chemrxiv.15011276/v2)
 
 ```bibtex
 @article{laurila_2026_c70_ml_nmr,
@@ -47,8 +47,8 @@ If you use this data, please cite the following:
   volume = {},
   number = {},
   pages = {},
-  doi={10.26434/chemrxiv.15011276/v1},
-  url={https://doi.org/10.26434/chemrxiv.15011276/v1}
+  doi={10.26434/chemrxiv.15011276/v2},
+  url={https://doi.org/10.26434/chemrxiv.15011276/v2}
 }
 ```
 

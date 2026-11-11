@@ -83,13 +83,3 @@ start_seconds=$(date -d "$start_time" +"%s")
 end_seconds=$(date -d "$end_time" +"%s")
 execution_time=$((end_seconds - start_seconds))
 echo "Job took $execution_time seconds to complete."
-
-#cp -r /scratch/plantto/olaurila/md_sims_proj2/anion/C70_He_di/pileg_16bead/NMR .
-#for i in $(seq 0 1 15); do \cp -f PREFIX.pos_${i}.xyz ./NMR/${i}; done
-#cd NMR
-#rm -f ./?/nmr-ml_matten* ./?/matten.log ./?/output_prediction* ./?/predictions.csv ./?/seg*
-#for i in $(seq 0 1 15); do cd ${i}; sbatch script_predict${i}.job; cd ..; done
-#cd ..
-
-#echo ${sim}
-#./prep.sh ${sim}

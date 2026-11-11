@@ -16,7 +16,7 @@ Example PIMD simulation runs with the resulting output files for the He@C<sub>70
 ## Directory Structure
 
 
-### PIMD simulations of He@C<sub>70</sub><sup>6-</sup>
+### PIMD simulations of He@C<sub>70</sub><sup>6-</sup> and He<sub>2</sub>@C<sub>70</sub><sup>6-</sup>
 10 sub-directories are provided, which include the input files to start the equilibrium and production simulation runs
 - [md_dimer_GLE](./md_dimer_GLE)
 - [md_dimer_PILE-G](./md_dimer_PILE-G)

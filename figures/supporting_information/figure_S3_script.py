@@ -22,7 +22,7 @@ plt.rcParams.update({'font.size': 16})
 fig, (ax1, ax2) = plt.subplots(1, 2, layout='none', figsize=(10, 4))
 fig.subplots_adjust(left=0.11, right=0.968, wspace=0.367, top=0.921, bottom=0.162, hspace=0.2)
 
-#Energy train+val anion model
+#Energy train+validation
 ax1.loglog(C70_an_energy_train, color='blue', label=r'training')
 ax1.loglog(C70_an_energy_val, color='green', label=r'validation', linestyle='dashed')
 ax1.set_ylabel(r'$E_{\text{RMSE}}^{\text{Loss}}$ (eV)', fontsize=18)
@@ -36,7 +36,7 @@ ax1.set_ylim([0, 15])
 ax1.legend(loc="upper right", fontsize=16)
 ax1.grid(True, which="both", axis="both", ls="-", alpha=0.4)
 
-#Force train+val anion model
+#Force train+validation
 ax2.loglog(C70_an_force_train, color='blue', label=r'training')
 ax2.loglog(C70_an_force_val, color='green', label=r'validation', linestyle='dashed')
 ax2.set_ylabel(r'$\vec{f}_{\text{RMSE}}^{\ \text{Loss}}$ (eV/Å)', fontsize=18)

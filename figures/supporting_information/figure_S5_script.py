@@ -22,7 +22,7 @@ plt.rcParams.update({'font.size': 16})
 fig, (ax1) = plt.subplots(1, 1, layout='none', figsize=(7, 6))
 fig.subplots_adjust(left=0.15, right=0.94, wspace=0.25, top=0.921, bottom=0.117, hspace=0.2)
 
-#Sigma train+val neutral model
+#Sigma train+validation
 ax1.loglog(C70_an_sigma_train, color='blue', label=r'$\sigma_{\text{Loss}}^{\text{train.}}$')
 ax1.loglog(C70_an_sigma_val, color='green', label=r'$\sigma_{\text{Loss}}^{\text{val.}}$', linestyle='dashed')
 ax1.loglog(C70_an_sigma_val_mae, color='firebrick', label=r'$\sigma_{\text{MAE}}^{\text{val.}}$')

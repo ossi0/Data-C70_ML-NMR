@@ -6,7 +6,7 @@ import seaborn as sns
 from matplotlib.lines import Line2D
 from matplotlib.ticker import (MultipleLocator, AutoMinorLocator)
 
-# Referense magnetic shielding of a free helium
+# Reference magnetic shielding of a free helium
 SIGMA_HE = 59.8627
 
 # Load th data

@@ -14,7 +14,7 @@ plt.rcParams['axes.formatter.useoffset'] = False
 plt.rcParams['axes.formatter.use_locale'] = False
 plt.rcParams['axes.formatter.limits'] = (-10, 10)  # effectively disables sci notation
 
-# Load the energy data MAYBE CHANGE THIS TO READ THE DATA FROM .db AS IN THE CASE OF FORCES
+# Load the energy data
 energies = []
 
 C70_He_di = np.loadtxt('../../data/dft/dimer/C70_di_an_energy.txt')
